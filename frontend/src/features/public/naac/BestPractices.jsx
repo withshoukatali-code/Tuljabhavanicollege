@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import {
   CalendarDays,
   ChevronDown,
@@ -14,7 +14,7 @@ import Navbar from "../navbar/Navbar";
 import PublicFooter from "../Footer/PublicFooter";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_URL || "";
 
 export default function BestPractices() {
   const [practices, setPractices] = useState([]);
@@ -221,7 +221,7 @@ export default function BestPractices() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="max-w-3xl">
               <p className="text-blue-200 text-sm font-semibold uppercase tracking-[0.18em] mb-3">
-                NAAC • Institutional Practices
+                NAAC â€¢ Institutional Practices
               </p>
 
               <h1 className="text-3xl md:text-4xl font-semibold text-white">

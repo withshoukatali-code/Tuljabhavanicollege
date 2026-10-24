@@ -6,7 +6,7 @@ import {
   UsersRound,
 } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = "";
 const FALLBACK_DEPARTMENT_IMAGE =
   "https://images.unsplash.com/photo-1562774053-701939374585?auto=format&fit=crop&w=1800&q=80";
 

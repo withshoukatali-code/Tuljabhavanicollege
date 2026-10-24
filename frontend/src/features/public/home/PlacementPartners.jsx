@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import {
   BriefcaseBusiness,
   TrendingUp,
@@ -7,7 +7,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-placements";
+const API_URL = "/api/home-placements";
 
 const getLogoUrl = (logo) => {
   if (!logo) return "";
@@ -20,7 +20,7 @@ const getLogoUrl = (logo) => {
     return logo;
   }
 
-  return `http://localhost:5000${logo}`;
+  return `${window.location.origin}${logo}`;
 };
 
 const PlacementPartners = () => {
@@ -134,8 +134,8 @@ const PlacementPartners = () => {
                     {company.highest_package !== null &&
                     company.highest_package !== undefined &&
                     company.highest_package !== ""
-                      ? `₹${Number(company.highest_package).toFixed(2)} LPA`
-                      : "—"}
+                      ? `â‚¹${Number(company.highest_package).toFixed(2)} LPA`
+                      : "â€”"}
                   </span>
                 </div>
 
@@ -153,8 +153,8 @@ const PlacementPartners = () => {
                       {company.average_package !== null &&
                       company.average_package !== undefined &&
                       company.average_package !== ""
-                        ? `₹${Number(company.average_package).toFixed(2)} LPA`
-                        : "—"}
+                        ? `â‚¹${Number(company.average_package).toFixed(2)} LPA`
+                        : "â€”"}
                     </p>
                   </div>
 
@@ -172,7 +172,7 @@ const PlacementPartners = () => {
                       company.students_placed !== undefined &&
                       company.students_placed !== ""
                         ? company.students_placed
-                        : "—"}
+                        : "â€”"}
                     </p>
                   </div>
                 </div>

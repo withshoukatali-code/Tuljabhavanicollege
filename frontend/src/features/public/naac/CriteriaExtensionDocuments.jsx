@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import {
   ChevronDown,
   ChevronRight,
@@ -12,7 +12,7 @@ import Navbar from "../navbar/Navbar";
 import PublicFooter from "../Footer/PublicFooter";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_URL || "";
 
 const API_URL =
   `${API_BASE}/api/naac/extension-documents`;
@@ -860,7 +860,7 @@ export default function CriteriaExtensionDocuments() {
                                       "
                                     >
                                       {item.criterion_no ||
-                                        "—"}
+                                        "â€”"}
                                     </span>
                                   </td>
 
@@ -935,7 +935,7 @@ export default function CriteriaExtensionDocuments() {
                                     "
                                   >
                                     {item.academic_year ||
-                                      "—"}
+                                      "â€”"}
                                   </td>
 
                                   {/* Document */}
@@ -986,7 +986,7 @@ export default function CriteriaExtensionDocuments() {
                                           text-slate-400
                                         "
                                       >
-                                        —
+                                        â€”
                                       </span>
                                     )}
                                   </td>
@@ -1051,7 +1051,7 @@ export default function CriteriaExtensionDocuments() {
                                     "
                                   >
                                     {item.criterion_no ||
-                                      "—"}
+                                      "â€”"}
                                   </p>
                                 </div>
 

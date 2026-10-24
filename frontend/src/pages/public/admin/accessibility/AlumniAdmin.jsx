@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import { Pencil, Plus, Trash2, Save, X, Upload, Eye, EyeOff } from 'lucide-react';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+const API_BASE = import.meta.env.VITE_API_URL || "";
 
 const SECTIONS = {
   stats: { label: 'Statistics', fields: [['label','Label','text'],['value','Value','text'],['display_order','Display Order','number']] },

@@ -8,7 +8,8 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const API_URL = "http://localhost:5000/api/about-college";
+import { apiUrl } from "@/config/api";
+const API_URL = apiUrl("/about-college");
 
 const fallbackData = {
   title: "Building Knowledge,",
@@ -122,10 +123,10 @@ const AboutPreview = () => {
      * Backend uploaded image
      */
     if (imageUrl.startsWith("/")) {
-      return `http://localhost:5000${imageUrl}`;
+      return `${window.location.origin}${imageUrl}`;
     }
 
-    return `http://localhost:5000/${imageUrl}`;
+    return `${window.location.origin}/${imageUrl}`;
   };
 
   // ============================================================
@@ -474,4 +475,3 @@ const AboutPreview = () => {
 };
 
 export default AboutPreview;
-

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 
 const API_URL =
-    "http://localhost:5000/api/bottom-institutional-strip";
+    "/api/bottom-institutional-strip";
 
 const BottomInstitutional = () => {
     const [items, setItems] = useState([]);

@@ -19,7 +19,7 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "";
 const API_URL = `${API_BASE}/api/college-header`;
 
 /* ============================================================
@@ -1483,7 +1483,7 @@ function CollegeHeader() {
                   </h3>
 
                   <p className="mt-1 text-xs text-slate-500">
-                    JPG, PNG or WebP • Maximum 20 MB
+                    JPG, PNG or WebP â€¢ Maximum 20 MB
                   </p>
 
                 </div>
@@ -1615,7 +1615,7 @@ function CollegeHeader() {
                   </h3>
 
                   <p className="mt-1 text-xs text-slate-500">
-                    JPG, PNG or WebP • Maximum 20 MB
+                    JPG, PNG or WebP â€¢ Maximum 20 MB
                   </p>
 
                 </div>
@@ -1838,4 +1838,3 @@ function CollegeHeader() {
 }
 
 export default CollegeHeader;
-

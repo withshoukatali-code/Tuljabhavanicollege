@@ -2,7 +2,7 @@
 // import { CalendarDays, ArrowRight } from "lucide-react";
 // import { Link } from "react-router-dom";
 
-// const API_URL = "http://localhost:5000/api/home-events";
+// const API_URL = "/api/home-events";
 
 // const fallbackImages = [
 //   "https://images.unsplash.com/photo-1523580846011-d3a5bc25702b",
@@ -356,8 +356,8 @@ import { useEffect, useState } from "react";
 import { CalendarDays, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const API_URL = "http://localhost:5000/api/home-events";
-const SERVER_URL = "http://localhost:5000";
+const API_URL = "/api/home-events";
+const SERVER_URL = "";
 
 // ============================================================
 // FALLBACK IMAGES
@@ -803,4 +803,3 @@ const Events = () => {
 };
 
 export default Events;
-

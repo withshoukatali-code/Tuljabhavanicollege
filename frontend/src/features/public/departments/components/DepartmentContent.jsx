@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { ChevronDown, UsersRound } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = "";
 
 const temporaryEnglishContent = {
   about: `The Department of English creates an engaging environment for the study of language, literature and communication. Our teaching connects classic works with contemporary voices, helping students develop critical thinking, confident expression and an appreciation of culture.`,
@@ -77,7 +77,7 @@ const DepartmentContent = ({ department, sections, programmes, faculty = [] }) =
             <div key={member.id || member.name} className="min-w-0 rounded-xl border border-slate-200 bg-white p-4 shadow-[0_5px_18px_rgba(15,50,98,0.08)] transition hover:-translate-y-0.5 hover:border-amber-200 hover:shadow-[0_10px_24px_rgba(15,50,98,0.14)]">
               <div className="flex min-h-full flex-col items-start">
                 <div className="h-20 w-20 overflow-hidden rounded-full bg-blue-100 text-[#102f58] ring-4 ring-blue-50">
-                  {member.photo_url ? <img src={member.photo_url.startsWith("http") ? member.photo_url : `${import.meta.env.VITE_API_URL || "http://localhost:5000"}${member.photo_url}`} alt={member.name} className="h-full w-full object-cover" /> : <div className="flex h-full items-center justify-center"><UsersRound size={20} /></div>}
+                  {member.photo_url ? <img src={member.photo_url.startsWith("http") ? member.photo_url : `${""}${member.photo_url}`} alt={member.name} className="h-full w-full object-cover" /> : <div className="flex h-full items-center justify-center"><UsersRound size={20} /></div>}
                 </div>
                 <div className="mt-4 min-w-0">
                   <h3 className="font-bold leading-5 text-slate-900">{member.name}</h3>

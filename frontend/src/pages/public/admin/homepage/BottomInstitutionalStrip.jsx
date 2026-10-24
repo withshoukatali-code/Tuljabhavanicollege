@@ -1,4 +1,4 @@
-
+﻿
 // import { useEffect, useRef, useState } from "react";
 // import {
 //   Save,
@@ -14,7 +14,7 @@
 
 // const API_BASE =
 //   import.meta.env.VITE_API_URL ||
-//   "http://localhost:5000/api";
+//   "/api";
 
 // const API_URL =
 //   `${API_BASE}/bottom-institutional-strip`;
@@ -819,7 +819,7 @@
 //                   </p>
 
 //                   <p className="mt-1 text-xs text-slate-400">
-//                     PDF only · Maximum 50 MB
+//                     PDF only Â· Maximum 50 MB
 //                   </p>
 //                 </div>
 //               )}
@@ -1022,7 +1022,7 @@
 //                 label="NAAC Accreditation"
 //                 value={
 //                   certificate
-//                     ? "Certificate ↗"
+//                     ? "Certificate â†—"
 //                     : "Not Uploaded"
 //                 }
 //               />
@@ -1133,7 +1133,7 @@ import {
 
 const API_BASE =
     import.meta.env.VITE_API_URL ||
-    "http://localhost:5000/api";
+    "/api";
 
 const API_URL =
     `${API_BASE}/bottom-institutional-strip`;
@@ -2482,7 +2482,7 @@ const BottomInstitutional = () => {
                                     </p>
 
                                     <p className="mt-1 text-xs text-slate-400">
-                                        PDF only · Maximum 50 MB
+                                        PDF only Â· Maximum 50 MB
                                     </p>
 
                                 </div>

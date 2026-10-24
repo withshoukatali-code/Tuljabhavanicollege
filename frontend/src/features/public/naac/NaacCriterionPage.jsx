@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import {
   ChevronDown,
   Download,
@@ -12,7 +12,7 @@ import Navbar from "../navbar/Navbar";
 import PublicFooter from "../Footer/PublicFooter";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_URL || "";
 
 export default function NaacCriterionPage() {
   const { slug } = useParams();
@@ -264,7 +264,7 @@ export default function NaacCriterionPage() {
   const cleanTitle = String(
     criterion.title || ""
   ).replace(
-    /^Criteria\s*\d+\s*[-–—]\s*/i,
+    /^Criteria\s*\d+\s*[-â€“â€”]\s*/i,
     ""
   );
 
@@ -533,7 +533,7 @@ export default function NaacCriterionPage() {
                 const sidebarTitle = String(
                   item.title || ""
                 ).replace(
-                  /^Criteria\s*\d+\s*[-–—]\s*/i,
+                  /^Criteria\s*\d+\s*[-â€“â€”]\s*/i,
                   ""
                 );
 
@@ -567,7 +567,7 @@ export default function NaacCriterionPage() {
                 to="/naac"
                 className="text-sm font-semibold text-[#102f58] hover:text-amber-600"
               >
-                ← Back to NAAC Criteria
+                â† Back to NAAC Criteria
               </Link>
             </div>
           </aside>

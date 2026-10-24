@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { ExternalLink, FileText, LoaderCircle, Save, Upload } from "lucide-react";
 import { pageMap } from "../../../features/public/StaticPage";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 const pageDefaults = Object.entries(pageMap).map(([page_key, content]) => ({ page_key, content }));
 const profileFields = [
   ["name", "Coordinator name"],

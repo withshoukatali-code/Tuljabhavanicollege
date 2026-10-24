@@ -15,8 +15,9 @@ import {
   Eye,
 } from "lucide-react";
 
-const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+import { API_URL } from "@/config/api";
+
+const API_BASE = API_URL;
 
 const PublicFooter = () => {
   const [footer, setFooter] = useState(null);
@@ -43,7 +44,7 @@ const PublicFooter = () => {
 
         const result = await response.json();
 
-        console.log("🔥 PUBLIC FOOTER RESPONSE:", result);
+        console.log("ðŸ”¥ PUBLIC FOOTER RESPONSE:", result);
 
         /*
           Support all common response formats:
@@ -71,13 +72,13 @@ const PublicFooter = () => {
           result?.record ||
           null;
 
-        console.log("🔥 PUBLIC FOOTER DATA:", footerData);
+        console.log("ðŸ”¥ PUBLIC FOOTER DATA:", footerData);
 
         if (mounted) {
           setFooter(footerData);
         }
       } catch (error) {
-        console.error("❌ PUBLIC FOOTER ERROR:", error);
+        console.error("âŒ PUBLIC FOOTER ERROR:", error);
 
         if (mounted) {
           setFooter(null);
@@ -155,24 +156,13 @@ const PublicFooter = () => {
     if (
       value.startsWith("http://") ||
       value.startsWith("https://") ||
-      value.startsWith("data:")
+      value.startsWith("data:") ||
+      value.startsWith("blob:")
     ) {
       return value;
     }
 
-    if (value.startsWith("/uploads/")) {
-      return `http://localhost:5000${value}`;
-    }
-
-    if (value.startsWith("uploads/")) {
-      return `http://localhost:5000/${value}`;
-    }
-
-    if (value.startsWith("/")) {
-      return `http://localhost:5000${value}`;
-    }
-
-    return `http://localhost:5000/${value}`;
+    return `${window.location.origin}/${value.replace(/^\/+/, "")}`;
   };
 
   // ============================================================
@@ -309,7 +299,7 @@ const PublicFooter = () => {
   // ============================================================
 
   if (!footer) {
-    console.warn("⚠️ PublicFooter: No footer data available.");
+    console.warn("âš ï¸ PublicFooter: No footer data available.");
 
     return null;
   }
@@ -331,7 +321,7 @@ const PublicFooter = () => {
           <div className="grid gap-10 lg:grid-cols-[0.85fr_1.5fr] lg:gap-12">
 
             {/* ==================================================
-                LEFT — COLLEGE INFORMATION
+                LEFT â€” COLLEGE INFORMATION
             ================================================== */}
 
             <div className="min-w-0">
@@ -582,7 +572,7 @@ const PublicFooter = () => {
               "
             >
               {footer.copyright_text ||
-                "© 2026 Tuljabhavani College. All Rights Reserved."}
+                "Â© 2026 Tuljabhavani College. All Rights Reserved."}
             </p>
 
   {/* DEVELOPER */}
@@ -636,7 +626,7 @@ const PublicFooter = () => {
             </div>
 
             {/* ==================================================
-                RIGHT — CONNECT US
+                RIGHT â€” CONNECT US
             ================================================== */}
 
             <div className="min-w-0">
@@ -824,11 +814,11 @@ const PublicFooter = () => {
 
           <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-4 sm:flex-row sm:items-center sm:justify-between lg:px-8">
             <p className="text-xs leading-5 text-blue-100/70">
-              {footer.copyright_text || "© 2026 Tuljabhavani College. All Rights Reserved."}
+              {footer.copyright_text || "Â© 2026 Tuljabhavani College. All Rights Reserved."}
             </p>
             <div className="ml-auto inline-flex min-w-40 items-center justify-between gap-4 border border-[#d4af37]/50 bg-[#0f3262] px-4 py-2 text-right shadow-sm" aria-live="polite">
               <span className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[#f3d46a]"><Eye size={15} /> Visitors</span>
-              <span className="min-w-10 text-lg font-bold tabular-nums text-white">{visitorCount === null ? "—" : visitorCount.toLocaleString("en-IN")}</span>
+              <span className="min-w-10 text-lg font-bold tabular-nums text-white">{visitorCount === null ? "â€”" : visitorCount.toLocaleString("en-IN")}</span>
             </div>
           </div>
 

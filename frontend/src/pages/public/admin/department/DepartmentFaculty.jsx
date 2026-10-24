@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Pencil, Plus, Save, Trash2, Upload, X } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 const EMPTY_FORM = {
   name: "",
   designation: "",
@@ -155,7 +155,7 @@ const DepartmentFaculty = ({ departmentId }) => {
                   {Number(member.is_hod) === 1 && <span className="text-[11px] font-medium text-blue-700">Head of Department</span>}
                   {Number(member.is_active) !== 1 && <span className="text-[11px] font-medium text-amber-700">Unpublished</span>}
                 </div>
-                <p className="mt-0.5 text-xs text-slate-600">{member.designation || "Faculty Member"}{member.qualification ? ` · ${member.qualification}` : ""}</p>
+                <p className="mt-0.5 text-xs text-slate-600">{member.designation || "Faculty Member"}{member.qualification ? ` Â· ${member.qualification}` : ""}</p>
                 <p className="mt-1 line-clamp-2 text-xs leading-5 text-slate-500">{member.profile}</p>
               </div>
               <button type="button" aria-label={`Edit ${member.name}`} onClick={() => editFaculty(member)} className="p-1.5 text-slate-500 hover:text-blue-700"><Pencil size={15} /></button>

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_URL || "";
 
 const EMPTY_INITIATIVE = {
   category: "Student Initiatives",
@@ -313,7 +313,7 @@ export default function StudentInitiativeAdmin() {
               >
                 <span className="block font-semibold">{item.title}</span>
                 <span className="mt-1 block text-xs text-slate-500">
-                  /{item.slug} · {Number(item.is_active) === 1 ? "Active" : "Inactive"}
+                  /{item.slug} Â· {Number(item.is_active) === 1 ? "Active" : "Inactive"}
                 </span>
               </button>
             ))}
@@ -536,4 +536,3 @@ function Upload({ label, accept, onChange, current }) {
     </label>
   );
 }
-

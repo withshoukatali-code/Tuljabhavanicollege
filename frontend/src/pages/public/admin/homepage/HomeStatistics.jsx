@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import {
   Plus,
   Pencil,
@@ -9,7 +9,7 @@ import {
   RefreshCw,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-statistics";
+const API_URL = "/api/home-statistics";
 
 const EMPTY_FORM = {
   label: "",
@@ -411,7 +411,7 @@ function HomeStatistics() {
               onClick={() => setError("")}
               className="font-bold text-red-500 hover:text-red-700"
             >
-              ×
+              Ã—
             </button>
           </div>
         )}
@@ -532,7 +532,7 @@ function HomeStatistics() {
                         className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-500 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-600"
                       >
                         <span className="text-sm">
-                          {active ? "●" : "○"}
+                          {active ? "â—" : "â—‹"}
                         </span>
                       </button>
 

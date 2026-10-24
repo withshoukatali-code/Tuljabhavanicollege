@@ -4,7 +4,7 @@ import TopBar from "../header/TopBar";
 import Navbar from "../navbar/Navbar";
 import PublicFooter from "../Footer/PublicFooter";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 
 function SafeLink({ href, children, file = false }) {
   try {
@@ -67,7 +67,7 @@ export default function EContentsPage() {
           {loading ? <p className="py-12 text-center text-sm text-slate-500">Loading learning resources...</p> : error ? <p role="alert" className="py-8 text-sm text-red-700">{error}</p> : filtered.length ? (
             <div className="mt-4 overflow-x-auto"><table className="w-full min-w-[760px] border-collapse text-left">
               <thead><tr className="border-b border-slate-300 bg-slate-50 text-xs font-semibold uppercase tracking-wider text-slate-600"><th className="w-16 px-4 py-3">No.</th><th className="px-4 py-3">Faculty name</th><th className="px-4 py-3">Subject</th><th className="px-4 py-3">Online class</th><th className="px-4 py-3">Digital material</th></tr></thead>
-              <tbody>{filtered.map((row, index) => <tr key={row.id || `${row.facultyName}-${index}`} className="border-b border-slate-200 align-top hover:bg-slate-50"><td className="px-4 py-4 text-sm tabular-nums text-slate-500">{index + 1}</td><th scope="row" className="px-4 py-4 text-sm font-semibold text-slate-900">{row.facultyName || "Faculty"}</th><td className="px-4 py-4 text-sm text-slate-700">{row.subject || "—"}</td><td className="px-4 py-4"><SafeLink href={row.classUrl}>Join class</SafeLink></td><td className="px-4 py-4"><SafeLink href={row.resourceUrl} file>Open material</SafeLink></td></tr>)}</tbody>
+              <tbody>{filtered.map((row, index) => <tr key={row.id || `${row.facultyName}-${index}`} className="border-b border-slate-200 align-top hover:bg-slate-50"><td className="px-4 py-4 text-sm tabular-nums text-slate-500">{index + 1}</td><th scope="row" className="px-4 py-4 text-sm font-semibold text-slate-900">{row.facultyName || "Faculty"}</th><td className="px-4 py-4 text-sm text-slate-700">{row.subject || "â€”"}</td><td className="px-4 py-4"><SafeLink href={row.classUrl}>Join class</SafeLink></td><td className="px-4 py-4"><SafeLink href={row.resourceUrl} file>Open material</SafeLink></td></tr>)}</tbody>
             </table></div>
           ) : <div className="border-b border-slate-200 py-14 text-center"><FileText size={28} className="mx-auto text-slate-400" /><h3 className="mt-3 text-base font-semibold text-slate-800">No online class links published</h3><p className="mt-1 text-sm text-slate-500">Faculty links and learning materials will appear here when added by the college.</p></div>}
         </section>

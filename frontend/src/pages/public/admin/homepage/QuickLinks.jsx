@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import {
   Plus,
   Pencil,
@@ -9,7 +9,7 @@ import {
   GripVertical,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/quick-links";
+const API_URL = "/api/quick-links";
 
 const emptyForm = {
   title: "",

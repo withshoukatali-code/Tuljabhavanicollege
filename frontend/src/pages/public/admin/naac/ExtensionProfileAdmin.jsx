@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 import {
   Plus,
   Pencil,
@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_URL || "";
 
 const emptyForm = {
   extended_id: "",
@@ -791,7 +791,7 @@ export default function ExtensionProfileAdmin() {
 
               <p className="mt-2 text-xs text-slate-400">
                 Allowed files: PDF, DOC, DOCX, XLS, XLSX
-                · Maximum size: 10 MB
+                Â· Maximum size: 10 MB
               </p>
 
             </div>

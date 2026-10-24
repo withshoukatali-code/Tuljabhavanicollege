@@ -4,7 +4,7 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = "";
 const DUMMY_HOD_IMAGE = "https://i.pravatar.cc/160?img=12";
 
 const DepartmentSidebar = ({ department, sections, programmes }) => {

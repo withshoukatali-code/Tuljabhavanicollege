@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { ArrowRight, CalendarDays } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-events";
+const API_URL = "/api/home-events";
 
 function HomeEvents() {
   const [events, setEvents] = useState([]);

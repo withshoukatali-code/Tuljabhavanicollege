@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { BookOpen, Building2, GraduationCap, Microscope } from "lucide-react";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import SearchButton from "./SearchButton";
 import { menuData } from "./MenuData";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 
 const departmentCategories = [
   { title: "Arts", icon: GraduationCap, matches: /social science|history|language|english|marathi|hindi|political|geography|economics/ },

@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { PlayCircle, ArrowRight } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/youtube";
+const API_URL = "/api/youtube";
 
 function YoutubeSection() {
   const [videos, setVideos] = useState([]);

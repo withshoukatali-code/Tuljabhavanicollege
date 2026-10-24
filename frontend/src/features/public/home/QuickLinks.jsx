@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import {
@@ -12,7 +12,7 @@ import {
   Users,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/quick-links";
+const API_URL = "/api/quick-links";
 
 const iconMap = {
   GraduationCap,

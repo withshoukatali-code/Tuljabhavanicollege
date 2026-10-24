@@ -133,11 +133,8 @@ app.use(
 // BASIC TEST
 // ============================================================
 
-app.get("/", (req, res) => {
-  res.json({
-    success: true,
-    message: "College CMS Backend Running 🚀",
-  });
+app.get("/api/health", (req, res) => {
+  res.json({ success: true, message: "College CMS Backend Running" });
 });
 
 // ============================================================
@@ -407,25 +404,28 @@ app.use("/api/naac", naacRoutes);
 // 404 HANDLER
 // ============================================================
 
+// PRODUCTION FRONTEND AND FINAL 404 HANDLING
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use((req, res) => {
-  res.status(404).json({
+  if (req.path === "/api" || req.path.startsWith("/api/")) {
+    return res.status(404).json({
+      success: false,
+      message: "API endpoint not found",
+      path: req.originalUrl,
+    });
+  }
+
+  if (req.method === "GET" && !req.path.startsWith("/uploads/")) {
+    return res.sendFile(path.join(__dirname, "public", "index.html"));
+  }
+
+  return res.status(404).json({
     success: false,
-    message: "API endpoint not found",
+    message: "Resource not found",
     path: req.originalUrl,
   });
 });
-
-app.get("/api/test", (req, res) => {
-    res.json({
-        success: true,
-        message: "SERVER IS RUNNING"
-    });
-});
-//============================================================
-//COLLEGE DEPT
-//============================================================
-app.use("/api/departments", departmentRoutes);
-
 
 //============================================================
 // ============================================================
@@ -481,4 +481,3 @@ app.listen(
     console.log("");
   }
 );
-

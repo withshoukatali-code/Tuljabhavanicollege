@@ -5,7 +5,7 @@
 //   {
 //     id: 1,
 //     date: "08 Aug",
-//     title: "Admissions Open for Academic Year 2026–27",
+//     title: "Admissions Open for Academic Year 2026â€“27",
 //   },
 //   {
 //     id: 2,
@@ -157,7 +157,7 @@ import {
   RefreshCw,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/news-notices";
+const API_URL = "/api/news-notices";
 
 function NewsPanel() {
   const [news, setNews] = useState([]);
@@ -502,4 +502,3 @@ function NewsPanel() {
 }
 
 export default NewsPanel;
-

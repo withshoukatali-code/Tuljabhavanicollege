@@ -9,7 +9,7 @@ import {
   X,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-events";
+const API_URL = "/api/home-events";
 
 const emptyForm = {
   title: "",
@@ -34,7 +34,7 @@ const imageUrl = (value) => {
     return value;
   }
 
-  return `http://localhost:5000${value}`;
+  return `${window.location.origin}${value}`;
 };
 
 function HomeEvents() {
@@ -332,7 +332,7 @@ function HomeEvents() {
                   <td className="p-4 text-sm text-slate-600">
                     {item.event_date
                       ? new Date(item.event_date).toLocaleDateString("en-IN")
-                      : "—"}
+                      : "â€”"}
                   </td>
 
                   <td className="p-4">
@@ -551,4 +551,3 @@ function HomeEvents() {
 }
 
 export default HomeEvents;
-

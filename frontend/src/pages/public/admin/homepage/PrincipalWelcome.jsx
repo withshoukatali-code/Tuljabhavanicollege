@@ -13,8 +13,8 @@ import {
   ArrowRight,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-welcome";
-const SERVER_URL = "http://localhost:5000";
+const API_URL = "/api/home-welcome";
+const SERVER_URL = "";
 
 function getApiUrl(path) {
   if (!path) return "";
@@ -1070,4 +1070,3 @@ function WelcomePrincipal() {
 }
 
 export default WelcomePrincipal;
-

@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 
 const API_BASE =
     import.meta.env.VITE_API_URL ||
-    "http://localhost:5000";
+    "";
 
 
 export default function StudentActivitiesAdmin() {
@@ -829,7 +829,7 @@ export default function StudentActivitiesAdmin() {
                                                 <p className="text-sm text-slate-500">
                                                     {item.academic_year}
                                                     {item.event_date
-                                                        ? ` • ${item.event_date}`
+                                                        ? ` â€¢ ${item.event_date}`
                                                         : ""}
                                                 </p>
 

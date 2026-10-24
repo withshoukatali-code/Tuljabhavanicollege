@@ -4,7 +4,7 @@ import {
   Users, PanelLeft, BookOpen, Settings2, Upload, X, Eye, EyeOff, Trophy, CalendarDays, PlayCircle
 } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 const ROOT = `${API_BASE}/api/student-initiatives`;
 const TABS = [
   { id: "settings", label: "Page Settings", icon: Settings2 },
@@ -334,7 +334,7 @@ export default function NCCAdmin() {
                     </div>
                     <div className="rounded-xl border border-slate-200 p-4">
                       <h3 className="flex items-center gap-2 font-bold text-slate-800"><FileText size={18} /> NCC Profile PDF</h3>
-                      <p className="mt-3 text-sm text-slate-500">The public page shows a “View Full Profile” CTA when this PDF is saved.</p>
+                      <p className="mt-3 text-sm text-slate-500">The public page shows a â€œView Full Profileâ€ CTA when this PDF is saved.</p>
                       {headForm.profile_pdf_url && <a href={mediaUrl(headForm.profile_pdf_url)} target="_blank" rel="noreferrer" className="mt-3 inline-flex items-center gap-2 text-sm font-bold text-blue-700"><Eye size={16} /> Preview current PDF</a>}
                       <label className="mt-3 block text-sm font-semibold text-slate-600">Choose PDF<input className="mt-2 block w-full text-sm" type="file" accept="application/pdf,.pdf" onChange={(e) => setPdfFile(e.target.files?.[0] || null)} /></label>
                       {pdfFile && <p className="mt-2 text-xs text-emerald-700">Selected: {pdfFile.name}</p>}
@@ -383,7 +383,7 @@ export default function NCCAdmin() {
             </div>}
           </div>
         </div>
-        {busy && <div className="mt-5 text-sm text-slate-500">Working…</div>}
+        {busy && <div className="mt-5 text-sm text-slate-500">Workingâ€¦</div>}
       </div>
     </div>
   );

@@ -8,7 +8,7 @@
 // //   FileText,
 // // } from "lucide-react";
 
-// // const API_BASE = "http://localhost:5000";
+// // const API_BASE = "";
 
 // // const WELCOME_API = `${API_BASE}/api/home-welcome`;
 // // const NEWS_API = `${API_BASE}/api/news-notices`;
@@ -936,7 +936,7 @@
 //   FileText,
 // } from "lucide-react";
 
-// const API_BASE = "http://localhost:5000";
+// const API_BASE = "";
 
 // const WELCOME_API = `${API_BASE}/api/home-welcome`;
 // const NEWS_API = `${API_BASE}/api/news-notices`;
@@ -1886,7 +1886,7 @@
 //   FileText,
 // } from "lucide-react";
 
-// const API_BASE = "http://localhost:5000";
+// const API_BASE = "";
 
 // const WELCOME_API = `${API_BASE}/api/home-welcome`;
 // const NEWS_API = `${API_BASE}/api/news-notices`;
@@ -2814,7 +2814,7 @@ import {
   FileText,
 } from "lucide-react";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "";
 
 const WELCOME_API = `${API_BASE}/api/home-welcome`;
 const NEWS_API = `${API_BASE}/api/news-notices`;
@@ -3860,4 +3860,3 @@ function PrincipalWelcome() {
 }
 
 export default PrincipalWelcome;
-

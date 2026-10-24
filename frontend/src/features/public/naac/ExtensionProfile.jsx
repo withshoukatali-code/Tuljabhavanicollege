@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import {
   ChevronDown,
   ChevronRight,
@@ -12,7 +12,7 @@ import Navbar from "../navbar/Navbar";
 import PublicFooter from "../Footer/PublicFooter";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_URL || "";
 
 const sidebarItems = [
   {
@@ -808,7 +808,7 @@ function ExtensionProfile() {
                                       "
                                     >
                                       {item.extended_id ||
-                                        "—"}
+                                        "â€”"}
                                     </span>
                                   </td>
 
@@ -828,7 +828,7 @@ function ExtensionProfile() {
                                       "
                                     >
                                       {item.deviation_question ||
-                                        "—"}
+                                        "â€”"}
                                     </p>
 
                                     {item.description && (
@@ -894,7 +894,7 @@ function ExtensionProfile() {
                                           text-slate-400
                                         "
                                       >
-                                        —
+                                        â€”
                                       </span>
                                     )}
                                   </td>
@@ -958,7 +958,7 @@ function ExtensionProfile() {
                                     "
                                   >
                                     {item.extended_id ||
-                                      "—"}
+                                      "â€”"}
                                   </p>
                                 </div>
 
@@ -1020,7 +1020,7 @@ function ExtensionProfile() {
                                   "
                                 >
                                   {item.deviation_question ||
-                                    "—"}
+                                    "â€”"}
                                 </p>
                               </div>
 

@@ -14,7 +14,7 @@ import {
   RefreshCw,
 } from "lucide-react";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "";
 const API_URL = `${API_BASE}/api/home-gallery`;
 
 const emptyForm = {
@@ -1012,4 +1012,3 @@ function HomeGallery() {
 }
 
 export default HomeGallery;
-

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import {
   Plus,
   Pencil,
@@ -10,7 +10,7 @@ import {
   EyeOff,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/breaking-news";
+const API_URL = "/api/breaking-news";
 
 const emptyForm = {
   title: "",

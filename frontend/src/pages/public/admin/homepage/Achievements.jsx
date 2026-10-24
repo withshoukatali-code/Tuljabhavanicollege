@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react";
+﻿// import { useEffect, useState } from "react";
 // import {
 //   Trophy,
 //   Plus,
@@ -8,7 +8,7 @@
 //   Save,
 // } from "lucide-react";
 
-// const API = "http://localhost:5000/api/achievements";
+// const API = "/api/achievements";
 
 // const emptyForm = {
 //   title: "",
@@ -475,7 +475,7 @@ import {
   RefreshCw,
 } from "lucide-react";
 
-const API = "http://localhost:5000/api/achievements";
+const API = "/api/achievements";
 
 const emptyForm = {
   title: "",

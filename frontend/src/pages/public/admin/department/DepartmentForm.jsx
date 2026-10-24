@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import {
     ArrowLeft,
@@ -15,7 +15,7 @@ import DepartmentSections from "./DepartmentSections";
 import DepartmentFaculty from "./DepartmentFaculty";
 
 const API_BASE =
-    import.meta.env.VITE_API_URL || "http://localhost:5000";
+    import.meta.env.VITE_API_URL || "";
 
 const EMPTY_FORM = {
     name: "",

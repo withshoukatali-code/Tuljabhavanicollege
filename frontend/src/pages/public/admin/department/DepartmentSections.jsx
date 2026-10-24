@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Pencil, Plus, Save, Trash2, X } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 const EMPTY_SECTION = { section_key: "", title: "", content: "", display_order: 0, is_active: 1 };
 
 const toKey = (value) => value.toLowerCase().trim().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
@@ -128,7 +128,7 @@ const DepartmentSections = ({ departmentId }) => {
                   <h3 className="font-semibold text-slate-800">{section.title}</h3>
                   {Number(section.is_active) !== 1 && <span className="text-xs font-medium text-amber-700">Unpublished</span>}
                 </div>
-                <p className="mt-1 text-xs text-slate-500">#{section.section_key} · Order {section.display_order}</p>
+                <p className="mt-1 text-xs text-slate-500">#{section.section_key} Â· Order {section.display_order}</p>
                 <p className="mt-2 line-clamp-3 whitespace-pre-wrap text-sm text-slate-600">{section.content}</p>
               </div>
               <button type="button" onClick={() => editSection(section)} aria-label={`Edit ${section.title}`} className="p-1.5 text-slate-500 hover:text-blue-700"><Pencil size={16} /></button>

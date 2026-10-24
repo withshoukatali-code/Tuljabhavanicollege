@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 const API_BASE =
-    import.meta.env.VITE_API_URL || "http://localhost:5000";
+    import.meta.env.VITE_API_URL || "";
 
 const fetchProgrammes = async (departmentId) => {
     if (!Number.isInteger(departmentId) || departmentId <= 0) {
@@ -1938,7 +1938,7 @@ const ProgrammeCard = ({
                             {programme.programme_code && (
                                 <>
                                     <span className="text-slate-300">
-                                        •
+                                        â€¢
                                     </span>
 
                                     <span>
@@ -2178,4 +2178,3 @@ const InfoItem = ({
 };
 
 export default DepartmentProgrammes;
-

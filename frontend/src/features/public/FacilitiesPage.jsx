@@ -4,7 +4,7 @@ import TopBar from "./header/TopBar";
 import Navbar from "./navbar/Navbar";
 import PublicFooter from "./Footer/PublicFooter";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = "";
 const iconByCategory = { Campus: MapPin, Learning: LibraryBig, Academic: Building2, Administration: Building2, "Student Life": Dumbbell, "Student Support": ShieldCheck, "Staff Support": Users };
 
 export default function FacilitiesPage() {
@@ -106,7 +106,7 @@ export default function FacilitiesPage() {
                 <article className="mb-8 grid overflow-hidden border border-slate-300 bg-white lg:grid-cols-[1.05fr_0.95fr]">
                   <div className="min-h-64">{facilityPhoto(computerLab, true)}</div>
                   <div className="p-5 sm:p-7">
-                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Priority infrastructure · {computerLab.category}</p>
+                    <p className="text-xs font-semibold uppercase tracking-[0.14em] text-slate-500">Priority infrastructure Â· {computerLab.category}</p>
                     <h3 className="mt-2 text-2xl font-bold text-slate-900">{computerLab.name}</h3>
                     <p className="mt-3 text-sm leading-6 text-slate-600">{computerLab.description}</p>
                     <dl className="mt-5 grid gap-x-5 border-y border-slate-200 sm:grid-cols-2">
@@ -136,7 +136,7 @@ export default function FacilitiesPage() {
                       <h3 className="mt-1 text-lg font-semibold text-slate-900">{facility.name}</h3>
                       {facility.description && <p className="mt-2 text-sm leading-6 text-slate-600">{facility.description}</p>}
                       <dl className="mt-4 divide-y divide-slate-200 border-y border-slate-200">{measurements.map(([label, value]) => <div key={label} className="flex justify-between gap-3 py-2 text-sm"><dt className="text-slate-600">{label}</dt><dd className="text-right text-slate-900">{value}</dd></div>)}</dl>
-                      {facility.features?.length > 0 && <ul className="mt-4 space-y-2">{facility.features.map((feature) => <li key={feature} className="flex gap-2 text-sm text-slate-700"><span className="text-[#0f3262]" aria-hidden="true">•</span>{feature}</li>)}</ul>}
+                      {facility.features?.length > 0 && <ul className="mt-4 space-y-2">{facility.features.map((feature) => <li key={feature} className="flex gap-2 text-sm text-slate-700"><span className="text-[#0f3262]" aria-hidden="true">â€¢</span>{feature}</li>)}</ul>}
                     </div>
                   </article>;
                 })}

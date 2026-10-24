@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+﻿import { useEffect, useMemo, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import TopBar from "../../../../features/public/header/TopBar";
 import Navbar from "../../../../features/public/navbar/Navbar";
@@ -17,7 +17,7 @@ import {
 } from "lucide-react";
 
 const API_BASE =
-    import.meta.env.VITE_API_URL || "http://localhost:5000";
+    import.meta.env.VITE_API_URL || "";
 
 const loadDepartments = async () => {
     const response = await fetch(`${API_BASE}/api/departments`);

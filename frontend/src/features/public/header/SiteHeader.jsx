@@ -9,10 +9,10 @@
 
 // const fallbackCollege = {
 //   logo_url: "/images/logo.png",
-//   tagline: "Knowledge • Character • Service",
+//   tagline: "Knowledge â€¢ Character â€¢ Service",
 //   college_name: "ABC Senior College",
 //   affiliation: "Affiliated to Shivaji University, Kolhapur",
-//   address: "Sangli • Maharashtra • India",
+//   address: "Sangli â€¢ Maharashtra â€¢ India",
 //   campus_image: "/images/campus.jpg",
 //   naac_grade: "A++",
 //   naac_cycle: "Cycle IV",
@@ -142,7 +142,7 @@
 //   MapPin,
 // } from "lucide-react";
 
-// const API_BASE = "http://localhost:5000";
+// const API_BASE = "";
 
 // const API_URL = `${API_BASE}/api/college-header`;
 
@@ -543,10 +543,10 @@
 //                       `NAAC ${naacGrade}`}
 
 //                     {naacCycle &&
-//                       ` • ${naacCycle}`}
+//                       ` â€¢ ${naacCycle}`}
 
 //                     {naacCgpa &&
-//                       ` • CGPA ${naacCgpa}`}
+//                       ` â€¢ CGPA ${naacCgpa}`}
 //                   </span>
 //                 </div>
 //               )}
@@ -693,7 +693,7 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "";
 const API_URL = `${API_BASE}/api/college-header`;
 
 function SiteHeader() {
@@ -1957,4 +1957,3 @@ function SiteHeader() {
 }
 
 export default SiteHeader;
-

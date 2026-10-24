@@ -12,7 +12,7 @@
 //   ArrowDown,
 // } from "lucide-react";
 
-// const API_URL = "http://localhost:5000/api/about-college";
+// const API_URL = "/api/about-college";
 
 // const emptyForm = {
 //   title: "",
@@ -1038,8 +1038,8 @@ import {
   Upload,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/about-college";
-const API_BASE = "http://localhost:5000";
+const API_URL = "/api/about-college";
+const API_BASE = "";
 
 const emptyForm = {
   title: "",
@@ -2453,4 +2453,3 @@ const AboutCollege = () => {
 };
 
 export default AboutCollege;
-

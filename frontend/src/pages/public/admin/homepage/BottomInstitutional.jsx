@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 
 const API_BASE =
-    "http://localhost:5000/api/bottom-institutional-strip";
+    "/api/bottom-institutional-strip";
 
 const emptyForm = {
     field_name: "",
@@ -570,7 +570,7 @@ function BottomInstitutional() {
                         <div className="px-6 py-16 text-center">
 
                             <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-slate-100 text-2xl text-slate-400">
-                                —
+                                â€”
                             </div>
 
                             <h3 className="text-base font-semibold text-slate-700">
@@ -655,7 +655,7 @@ function BottomInstitutional() {
                                                             }
                                                             className="text-[10px] font-bold text-slate-500 hover:text-[#0F3262] disabled:cursor-not-allowed disabled:opacity-20"
                                                         >
-                                                            ▲
+                                                            â–²
                                                         </button>
 
                                                         <button
@@ -672,7 +672,7 @@ function BottomInstitutional() {
                                                             }
                                                             className="text-[10px] font-bold text-slate-500 hover:text-[#0F3262] disabled:cursor-not-allowed disabled:opacity-20"
                                                         >
-                                                            ▼
+                                                            â–¼
                                                         </button>
 
                                                     </div>
@@ -821,7 +821,7 @@ function BottomInstitutional() {
                                 onClick={closeForm}
                                 className="text-xl text-white/80 hover:text-white"
                             >
-                                ×
+                                Ã—
                             </button>
 
                         </div>

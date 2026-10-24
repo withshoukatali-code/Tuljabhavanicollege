@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Mail, Phone } from "lucide-react";
 
-const API_URL = `${import.meta.env.VITE_API_URL || "http://localhost:5000"}/api/college-header`;
+const API_URL = `${import.meta.env.VITE_API_URL || ""}/api/college-header`;
 
 function TopBar() {
   const [college, setCollege] = useState({});

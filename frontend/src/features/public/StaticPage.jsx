@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react";
+﻿// import { useEffect, useState } from "react";
 // import { Link } from "react-router-dom";
 // import { ArrowUpRight, Download, FileText, Mail, Phone, UserRound } from "lucide-react";
 // import TopBar from "./header/TopBar";
@@ -6,7 +6,7 @@
 //     contentVersion: 2,
 // import PublicFooter from "./Footer/PublicFooter";
 //     subtitle: "Environmental sustainability and NAAC documentation",
-// const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+// const API_BASE = import.meta.env.VITE_API_URL || "";
 //       "A green and environmental audit helps a senior college review its environmental footprint, document sustainable campus practices, and track improvements with verifiable evidence.",
 //     highlights: ["NAAC Criterion 7.1.3", "Environmental stewardship", "Evidence-led improvement"],
 //   about: { accent: "#0f3262" },
@@ -147,7 +147,7 @@
 //       },
 //       {
 //         heading: "Facilities",
-//         text: "Campus facilities including laboratories, libraries, sports spaces and learning areas are part of the college’s rich academic ecosystem.",
+//         text: "Campus facilities including laboratories, libraries, sports spaces and learning areas are part of the collegeâ€™s rich academic ecosystem.",
 //       },
 //     ],
 //     cta: { label: "Back to Home", to: "/" },
@@ -350,7 +350,7 @@
 //     title: "Research",
 //     subtitle: "Innovation and inquiry",
 //     description:
-//       "Research and innovation are integral to the college’s academic mission and its contribution to society.",
+//       "Research and innovation are integral to the collegeâ€™s academic mission and its contribution to society.",
 //     highlights: ["Innovation culture", "Faculty inquiry", "Student participation"],
 //     sections: [
 //       {
@@ -394,7 +394,7 @@
 //     title: "Students' Era",
 //     subtitle: "Student life and engagement",
 //     description:
-//       "Students’ Era reflects the vibrant campus life, leadership, participation, and student-led initiatives within the institution.",
+//       "Studentsâ€™ Era reflects the vibrant campus life, leadership, participation, and student-led initiatives within the institution.",
 //     highlights: ["Campus engagement", "Youth leadership", "Student activities"],
 //     sections: [
 //       {
@@ -423,9 +423,9 @@
 //     ],
 //   },
 //   "students-era-womens-empowerment": {
-//     title: "Women’s Empowerment",
+//     title: "Womenâ€™s Empowerment",
 //     subtitle: "Leadership, opportunity, and support",
-//     description: "Explore programmes and initiatives that support women’s participation, confidence, safety, and leadership on campus.",
+//     description: "Explore programmes and initiatives that support womenâ€™s participation, confidence, safety, and leadership on campus.",
 //     highlights: ["Leadership", "Equal opportunity", "Student support"],
 //     sections: [
 //       { heading: "Programmes", text: "Add workshops, awareness events, mentoring, and development activities organized for students." },
@@ -680,7 +680,7 @@
 //       },
 //       {
 //         heading: "Impact",
-//         text: "These practices create a stronger learning environment and reinforce the institution’s values of excellence and inclusion.",
+//         text: "These practices create a stronger learning environment and reinforce the institutionâ€™s values of excellence and inclusion.",
 //       },
 //     ],
 //     cta: { label: "View Distinctiveness", to: "/iqac/distinctiveness" },
@@ -689,12 +689,12 @@
 //     title: "Institutional Distinctiveness",
 //     subtitle: "Unique identity",
 //     description:
-//       "Institutional distinctiveness reflects the college’s unique values, strengths, and contribution to students and society.",
+//       "Institutional distinctiveness reflects the collegeâ€™s unique values, strengths, and contribution to students and society.",
 //     highlights: ["Unique identity", "Community value", "Academic depth"],
 //     sections: [
 //       {
 //         heading: "Distinctive Edge",
-//         text: "The college’s identity is built on quality pedagogy, student support, ethical values, and purposeful engagement.",
+//         text: "The collegeâ€™s identity is built on quality pedagogy, student support, ethical values, and purposeful engagement.",
 //       },
 //       {
 //         heading: "Community Linkage",
@@ -733,7 +733,7 @@
 //     title: "Green Audit",
 //     subtitle: "Sustainability review",
 //     description:
-//       "Green audit focuses on environmental management, sustainability practices, and the college’s resource-conscious campus culture.",
+//       "Green audit focuses on environmental management, sustainability practices, and the collegeâ€™s resource-conscious campus culture.",
 //     highlights: ["Sustainability", "Environment", "Resource efficiency"],
 //     sections: [
 //       {
@@ -846,7 +846,7 @@
 //       },
 //       {
 //         heading: "Stakeholder Value",
-//         text: "Reports provide transparency and evidence of the college’s commitment to quality enhancement.",
+//         text: "Reports provide transparency and evidence of the collegeâ€™s commitment to quality enhancement.",
 //       },
 //     ],
 //     cta: { label: "View Archive", to: "/iqac/archive" },
@@ -860,7 +860,7 @@
 //     sections: [
 //       {
 //         heading: "Historic Record",
-//         text: "The archive keeps the campus’s quality journey documented for planning, audit, and reference.",
+//         text: "The archive keeps the campusâ€™s quality journey documented for planning, audit, and reference.",
 //       },
 //       {
 //         heading: "Working Resource",
@@ -899,7 +899,7 @@
 //     title: "NAAC Criteria",
 //     subtitle: "Quality assessment dimensions",
 //     description:
-//       "NAAC criteria guide the college’s review across curricular, teaching, outreach, governance, infrastructure, and student support areas.",
+//       "NAAC criteria guide the collegeâ€™s review across curricular, teaching, outreach, governance, infrastructure, and student support areas.",
 //     highlights: ["Curriculum", "Infrastructure", "Governance"],
 //     sections: [
 //       {
@@ -974,7 +974,7 @@
 //     title: "NAAC Certificates",
 //     subtitle: "Recognition documents",
 //     description:
-//       "Certificates and recognition documents reflect the institution’s accredited status and long-term quality commitment.",
+//       "Certificates and recognition documents reflect the institutionâ€™s accredited status and long-term quality commitment.",
 //     highlights: ["Recognition", "Accreditation", "Institutional confidence"],
 //     sections: [
 //       {
@@ -987,7 +987,7 @@
 //       },
 //       {
 //         heading: "Institutional Legacy",
-//         text: "These records celebrate ongoing progress and the college’s commitment to excellence.",
+//         text: "These records celebrate ongoing progress and the collegeâ€™s commitment to excellence.",
 //       },
 //     ],
 //     cta: { label: "View Affiliation Docs", to: "/naac/affiliation" },
@@ -996,12 +996,12 @@
 //     title: "Affiliation Documents",
 //     subtitle: "Academic approvals",
 //     description:
-//       "Affiliation and approval documents establish the college’s formal academic standing and recognition within the larger system.",
+//       "Affiliation and approval documents establish the collegeâ€™s formal academic standing and recognition within the larger system.",
 //     highlights: ["Recognition", "Academic standing", "Official approvals"],
 //     sections: [
 //       {
 //         heading: "Academic Recognition",
-//         text: "These documents reflect the institution’s formal standing, approvals, and compliance with educational regulations.",
+//         text: "These documents reflect the institutionâ€™s formal standing, approvals, and compliance with educational regulations.",
 //       },
 //       {
 //         heading: "Operational Trust",
@@ -1018,7 +1018,7 @@
 //     title: "NIRF Ranking",
 //     subtitle: "National rankings",
 //     description:
-//       "NIRF participation reflects the institution’s commitment to transparent quality reporting and public accountability.",
+//       "NIRF participation reflects the institutionâ€™s commitment to transparent quality reporting and public accountability.",
 //     highlights: ["National ranking", "Performance review", "Public accountability"],
 //     sections: [
 //       {
@@ -1062,12 +1062,12 @@
 //     title: "UGC Recognition",
 //     subtitle: "2(f) & 12(B)",
 //     description:
-//       "UGC recognition reflects the institution’s formal standing and institutional credibility within the higher education framework.",
+//       "UGC recognition reflects the institutionâ€™s formal standing and institutional credibility within the higher education framework.",
 //     highlights: ["Formal recognition", "Academic credibility", "Institutional trust"],
 //     sections: [
 //       {
 //         heading: "Recognition Status",
-//         text: "These approvals underscore the institution’s eligibility and commitment to recognized higher education standards.",
+//         text: "These approvals underscore the institutionâ€™s eligibility and commitment to recognized higher education standards.",
 //       },
 //       {
 //         heading: "Academic Governance",
@@ -1084,7 +1084,7 @@
 //     title: "University Affiliation",
 //     subtitle: "Academic linkage",
 //     description:
-//       "University affiliation defines the institution’s academic linkage and its adherence to recognized standards and regulations.",
+//       "University affiliation defines the institutionâ€™s academic linkage and its adherence to recognized standards and regulations.",
 //     highlights: ["Academic linkage", "Compliance", "Standards"],
 //     sections: [
 //       {
@@ -1106,7 +1106,7 @@
 //     title: "Recognition & Approvals",
 //     subtitle: "Institutional approvals",
 //     description:
-//       "Recognition and approvals reflect the institution’s compliance with policy, quality expectations, and effective institutional governance.",
+//       "Recognition and approvals reflect the institutionâ€™s compliance with policy, quality expectations, and effective institutional governance.",
 //     highlights: ["Approvals", "Compliance", "Institutional accountability"],
 //     sections: [
 //       {
@@ -1150,7 +1150,7 @@
 //     title: "Right to Information (RTI)",
 //     subtitle: "Transparency & access",
 //     description:
-//       "RTI information supports the public’s right to access relevant institutional records and information in a transparent manner.",
+//       "RTI information supports the publicâ€™s right to access relevant institutional records and information in a transparent manner.",
 //     highlights: ["Transparency", "Access", "Public information"],
 //     sections: [
 //       {
@@ -1185,7 +1185,7 @@
 //       },
 //       {
 //         heading: "Public Information",
-//         text: "It helps present the college’s mission, strengths, and identity clearly and consistently.",
+//         text: "It helps present the collegeâ€™s mission, strengths, and identity clearly and consistently.",
 //       },
 //     ],
 //     cta: { label: "View Policies", to: "/mandatory-disclosure/policies" },
@@ -1207,7 +1207,7 @@
 //       },
 //       {
 //         heading: "Accountability",
-//         text: "A structured policy ecosystem strengthens the institution’s commitments to transparency and quality.",
+//         text: "A structured policy ecosystem strengthens the institutionâ€™s commitments to transparency and quality.",
 //       },
 //     ],
 //     cta: { label: "View Code of Conduct", to: "/mandatory-disclosure/code-of-conduct" },
@@ -1273,7 +1273,7 @@
 //       },
 //       {
 //         heading: "Institutional Stability",
-//         text: "A sound HR framework strengthens the organization’s long-term performance and culture.",
+//         text: "A sound HR framework strengthens the organizationâ€™s long-term performance and culture.",
 //       },
 //     ],
 //     cta: { label: "Back to Home", to: "/" },
@@ -1368,7 +1368,7 @@
 //           </section>
 //           <div className="pt-6">
 //             <Link to={page.cta?.to || "/naac/aqar"} className="text-sm font-semibold text-blue-800 hover:underline">
-//               {page.cta?.label || "View AQAR"} →
+//               {page.cta?.label || "View AQAR"} â†’
 //             </Link>
 //           </div>
 //         </main>
@@ -1616,7 +1616,7 @@
 //               className="inline-flex items-center gap-2 rounded-full bg-[#0f3262] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#153d72]"
 //             >
 //               {page.cta?.label || cta?.label || "Go to page"}
-//               <span aria-hidden="true">→</span>
+//               <span aria-hidden="true">â†’</span>
 //             </Link>
 //           </div>
 //         ) : null}
@@ -1647,7 +1647,7 @@ import Navbar from "./navbar/Navbar";
 import PublicFooter from "./Footer/PublicFooter";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_URL || "";
 
 /* ============================================================
    THEME MAP

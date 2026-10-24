@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import {
   Save,
   Trash2,
@@ -21,7 +21,7 @@ import {
 } from "lucide-react";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+  import.meta.env.VITE_API_URL || "/api";
 
 const SERVER_BASE = API_BASE.replace(/\/api\/?$/, "");
 
@@ -1227,7 +1227,7 @@ const Footer = () => {
                 name="copyright_text"
                 value={form.copyright_text}
                 onChange={handleChange}
-                placeholder="© 2026 Tuljabhavani College. All Rights Reserved."
+                placeholder="Â© 2026 Tuljabhavani College. All Rights Reserved."
               />
 
               <Field

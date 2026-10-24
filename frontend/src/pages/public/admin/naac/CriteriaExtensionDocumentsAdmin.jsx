@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 import {
   Edit,
   FileText,
@@ -12,7 +12,7 @@ import {
 } from "lucide-react";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_URL || "";
 
 const API_URL =
   `${API_BASE}/api/naac/extension-profile`;
@@ -893,14 +893,14 @@ export default function ExtensionProfileAdmin() {
                         <td className="px-5 py-4 align-top">
                           <span className="font-bold text-blue-400">
                             {record.extended_id ||
-                              "—"}
+                              "â€”"}
                           </span>
                         </td>
 
                         <td className="max-w-[420px] px-5 py-4 align-top">
                           <p className="text-sm leading-6 text-slate-700">
                             {record.deviation_question ||
-                              "—"}
+                              "â€”"}
                           </p>
 
                           {record.document_title && (
@@ -914,7 +914,7 @@ export default function ExtensionProfileAdmin() {
 
                         <td className="px-5 py-4 align-top text-sm text-slate-600">
                           {record.academic_year ||
-                            "—"}
+                            "â€”"}
                         </td>
 
                         <td className="px-5 py-4 text-center align-top text-sm text-slate-600">
@@ -1027,7 +1027,7 @@ export default function ExtensionProfileAdmin() {
 
                         <p className="mt-1 text-lg font-bold text-blue-400">
                           {record.extended_id ||
-                            "—"}
+                            "â€”"}
                         </p>
                       </div>
 
@@ -1049,7 +1049,7 @@ export default function ExtensionProfileAdmin() {
 
                       <p className="mt-2 text-sm leading-6 text-slate-700">
                         {record.deviation_question ||
-                          "—"}
+                          "â€”"}
                       </p>
                     </div>
 
@@ -1075,7 +1075,7 @@ export default function ExtensionProfileAdmin() {
 
                         <p className="mt-1 text-sm text-slate-600">
                           {record.academic_year ||
-                            "—"}
+                            "â€”"}
                         </p>
                       </div>
 

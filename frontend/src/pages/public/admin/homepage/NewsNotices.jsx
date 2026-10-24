@@ -13,7 +13,7 @@
 //   ExternalLink,
 // } from "lucide-react";
 
-// const API_BASE = "http://localhost:5000";
+// const API_BASE = "";
 // const API_URL = `${API_BASE}/api/news-notices`;
 
 // const emptyForm = {
@@ -311,12 +311,12 @@
 //   // =====================================================
 
 //   const formatDate = (value) => {
-//     if (!value) return "—";
+//     if (!value) return "â€”";
 
 //     const date = new Date(value);
 
 //     if (Number.isNaN(date.getTime())) {
-//       return "—";
+//       return "â€”";
 //     }
 
 //     return date.toLocaleDateString("en-IN", {
@@ -878,11 +878,11 @@
 //                     className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
 //                   >
 //                     <option value={1}>
-//                       Active — Show on Homepage
+//                       Active â€” Show on Homepage
 //                     </option>
 
 //                     <option value={0}>
-//                       Inactive — Hide
+//                       Inactive â€” Hide
 //                     </option>
 //                   </select>
 //                 </div>
@@ -950,7 +950,7 @@
 //   FolderOpen,
 // } from "lucide-react";
 
-// const API_BASE = "http://localhost:5000";
+// const API_BASE = "";
 // const API_URL = `${API_BASE}/api/news-notices`;
 // const BROWSE_API_URL = `${API_BASE}/api/files`;
 
@@ -1359,12 +1359,12 @@
 //   // =====================================================
 
 //   const formatDate = (value) => {
-//     if (!value) return "—";
+//     if (!value) return "â€”";
 
 //     const date = new Date(value);
 
 //     if (Number.isNaN(date.getTime())) {
-//       return "—";
+//       return "â€”";
 //     }
 
 //     return date.toLocaleDateString("en-IN", {
@@ -1998,11 +1998,11 @@
 //                     className="w-full rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
 //                   >
 //                     <option value={1}>
-//                       Active — Show on Homepage
+//                       Active â€” Show on Homepage
 //                     </option>
 
 //                     <option value={0}>
-//                       Inactive — Hide
+//                       Inactive â€” Hide
 //                     </option>
 //                   </select>
 //                 </div>
@@ -2210,7 +2210,7 @@ import {
   Megaphone,
 } from "lucide-react";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "";
 const API_URL = `${API_BASE}/api/news-notices`;
 
 const initialForm = {
@@ -3684,4 +3684,3 @@ export default function NewsNotices() {
     </div>
   );
 }
-

@@ -1,11 +1,11 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { UsersRound } from "lucide-react";
 import TopBar from "./header/TopBar";
 import Navbar from "./navbar/Navbar";
 import PublicFooter from "./Footer/PublicFooter";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = "";
 const committeePages = [
   {
     key: "governing-management",
@@ -123,7 +123,7 @@ export default function ManagementCommitteePage({ committeeKey }) {
                       <td className="px-4 py-4 tabular-nums text-slate-500">{index + 1}</td>
                       <td className="px-4 py-4 font-semibold text-slate-900">{member.member_name}</td>
                       <td className="px-4 py-4 text-slate-700">{member.designation}</td>
-                      <td className="px-4 py-4 text-slate-600">{member.representation || "—"}</td>
+                      <td className="px-4 py-4 text-slate-600">{member.representation || "â€”"}</td>
                     </tr>
                   )) : (
                     <tr>

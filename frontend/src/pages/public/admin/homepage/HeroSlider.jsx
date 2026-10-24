@@ -1,4 +1,4 @@
-// import { useEffect, useState } from "react";
+﻿// import { useEffect, useState } from "react";
 // import {
 //   Image as ImageIcon,
 //   Plus,
@@ -11,7 +11,7 @@
 //   ExternalLink,
 // } from "lucide-react";
 
-// const API = "http://localhost:5000/api/hero-slider";
+// const API = "/api/hero-slider";
 
 // const emptyForm = {
 //   title: "",
@@ -871,9 +871,9 @@ import {
   EyeOff,
 } from "lucide-react";
 
-const API = "http://localhost:5000/api/hero-slider";
-const UPLOAD_API = "http://localhost:5000/api/hero-slider/upload";
-const API_BASE = "http://localhost:5000";
+const API = "/api/hero-slider";
+const UPLOAD_API = "/api/hero-slider/upload";
+const API_BASE = "";
 
 const emptyForm = {
   title: "",

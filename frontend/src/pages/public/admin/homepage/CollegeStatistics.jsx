@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import {
   Plus,
   Pencil,
@@ -8,7 +8,7 @@ import {
   BarChart3,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-statistics";
+const API_URL = "/api/home-statistics";
 
 const emptyForm = {
   label: "",
@@ -411,9 +411,9 @@ function CollegeStatistics() {
                     }
                   >
                     {item.is_active ? (
-                      "●"
+                      "â—"
                     ) : (
-                      "○"
+                      "â—‹"
                     )}
                   </button>
 

@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Megaphone } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/breaking-news";
+const API_URL = "/api/breaking-news";
 
 function BreakingNews() {
   const [news, setNews] = useState([]);
@@ -102,7 +102,7 @@ function BreakingNews() {
                 "
               >
                 <span className="mr-2">
-                  ●
+                  â—
                 </span>
 
                 {item.title}

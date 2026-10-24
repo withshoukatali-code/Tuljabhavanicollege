@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { ExternalLink, FileText, Pencil, Plus, Save, Trash2, Upload, X } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 const EMPTY_CRITERION = { criterion_number: "", slug: "", title: "", description: "", display_order: 0, is_active: 1 };
 const EMPTY_POINT = { code: "", title: "", content: "", display_order: 0 };
 

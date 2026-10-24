@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import {
   Accessibility,
   ExternalLink,
@@ -11,7 +11,7 @@ import Navbar from "../navbar/Navbar";
 import PublicFooter from "../Footer/PublicFooter";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_URL || "";
 
 export default function ScreenReader() {
   const [readers, setReaders] = useState([]);
@@ -209,7 +209,7 @@ export default function ScreenReader() {
                                   </a>
                                 ) : (
                                   <span className="text-slate-400">
-                                    —
+                                    â€”
                                   </span>
                                 )}
                               </td>

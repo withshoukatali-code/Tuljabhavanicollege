@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+﻿import { useEffect, useRef, useState } from "react";
 import {
   Save,
   Image,
@@ -10,7 +10,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-welcome";
+const API_URL = "/api/home-welcome";
 
 const emptyForm = {
   welcome_title: "",
@@ -808,7 +808,7 @@ function HomeWelcome() {
                     </button>
 
                     <p className="mt-3 text-xs text-slate-400">
-                      JPG, JPEG, PNG or WebP · Max 5 MB
+                      JPG, JPEG, PNG or WebP Â· Max 5 MB
                     </p>
 
                     {photoFile && (
@@ -930,7 +930,7 @@ function HomeWelcome() {
                   )}
 
                 <p className="mt-2 text-xs text-slate-400">
-                  PDF only · Maximum 10 MB
+                  PDF only Â· Maximum 10 MB
                 </p>
 
               </div>

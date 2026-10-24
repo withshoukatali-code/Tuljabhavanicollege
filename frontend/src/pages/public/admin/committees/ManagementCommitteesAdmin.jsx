@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { LoaderCircle, Plus, Save, Trash2, X } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 const committees = [
   { key: "governing-management", label: "Governing Management Committee" },
   { key: "local-management", label: "Local Management Committee" },
@@ -187,7 +187,7 @@ export default function ManagementCommitteesAdmin() {
                   <td className="px-4 py-3 tabular-nums text-slate-500">{member.display_order}</td>
                   <td className="px-4 py-3 font-semibold text-slate-900">{member.member_name}</td>
                   <td className="px-4 py-3 text-slate-700">{member.designation}</td>
-                  <td className="px-4 py-3 text-slate-600">{member.representation || "—"}</td>
+                  <td className="px-4 py-3 text-slate-600">{member.representation || "â€”"}</td>
                   <td className="px-4 py-3"><span className={Number(member.is_active) === 1 ? "text-emerald-700" : "text-slate-500"}>{Number(member.is_active) === 1 ? "Published" : "Draft"}</span></td>
                   <td className="px-4 py-3"><div className="flex justify-end gap-2"><button type="button" onClick={() => editMember(member)} className="border border-slate-300 px-3 py-1.5 text-xs font-semibold text-slate-700 hover:bg-white">Edit</button><button type="button" onClick={() => deleteMember(member)} aria-label={`Delete ${member.member_name}`} className="inline-flex h-8 w-8 items-center justify-center border border-slate-300 text-slate-600 hover:border-red-300 hover:text-red-700"><Trash2 size={15} /></button></div></td>
                 </tr>

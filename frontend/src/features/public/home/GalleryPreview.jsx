@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
   Images,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-gallery";
-const SERVER_URL = "http://localhost:5000";
+const API_URL = "/api/home-gallery";
+const SERVER_URL = "";
 
 function getImageUrl(value) {
   if (!value) return "";

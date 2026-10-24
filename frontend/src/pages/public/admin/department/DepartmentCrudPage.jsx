@@ -5,7 +5,7 @@ import DepartmentProfile from "./DepartmentProfile";
 import DepartmentProgrammes from "./DepartmentProgrammes";
 import DepartmentSections from "./DepartmentSections";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 
 const resources = {
   profiles: { title: "Department Profiles", description: "Manage the overview, vision, contact information and publication state for each department." },

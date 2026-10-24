@@ -1,4 +1,4 @@
-
+﻿
 // import { useEffect, useRef, useState } from "react";
 // import {
 //   Plus,
@@ -11,7 +11,7 @@
 //   Image as ImageIcon,
 // } from "lucide-react";
 
-// const API_URL = "http://localhost:5000/api/home-placements";
+// const API_URL = "/api/home-placements";
 
 // const emptyForm = {
 //   company_name: "",
@@ -911,8 +911,8 @@
 
 //                       {partner.highest_package !== null &&
 //                         partner.highest_package !== undefined
-//                         ? `₹${Number(partner.highest_package).toFixed(2)} LPA`
-//                         : "—"}
+//                         ? `â‚¹${Number(partner.highest_package).toFixed(2)} LPA`
+//                         : "â€”"}
 
 //                     </td>
 
@@ -925,8 +925,8 @@
 
 //                       {partner.average_package !== null &&
 //                         partner.average_package !== undefined
-//                         ? `₹${Number(partner.average_package).toFixed(2)} LPA`
-//                         : "—"}
+//                         ? `â‚¹${Number(partner.average_package).toFixed(2)} LPA`
+//                         : "â€”"}
 
 //                     </td>
 
@@ -940,7 +940,7 @@
 //                       {partner.students_placed !== null &&
 //                         partner.students_placed !== undefined
 //                         ? partner.students_placed
-//                         : "—"}
+//                         : "â€”"}
 
 //                     </td>
 
@@ -1042,7 +1042,7 @@ import {
   X,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-placements";
+const API_URL = "/api/home-placements";
 const ADMIN_API_URL = `${API_URL}/admin`;
 
 const emptyForm = {
@@ -1067,7 +1067,7 @@ const logoUrl = (value) => {
     return value;
   }
 
-  return `http://localhost:5000${value}`;
+  return `${window.location.origin}${value.startsWith("/") ? "" : "/"}${value}`;
 };
 
 const readJson = async (response) => {
@@ -1603,14 +1603,14 @@ const HomePartner = () => {
 
                     <td className="px-5 py-4 text-sm">
                       {partner.highest_package != null
-                        ? `₹${Number(partner.highest_package).toFixed(2)} LPA`
-                        : "—"}
+                        ? `â‚¹${Number(partner.highest_package).toFixed(2)} LPA`
+                        : "â€”"}
                     </td>
 
                     <td className="px-5 py-4 text-sm">
                       {partner.average_package != null
-                        ? `₹${Number(partner.average_package).toFixed(2)} LPA`
-                        : "—"}
+                        ? `â‚¹${Number(partner.average_package).toFixed(2)} LPA`
+                        : "â€”"}
                     </td>
 
                     <td className="px-5 py-4">
