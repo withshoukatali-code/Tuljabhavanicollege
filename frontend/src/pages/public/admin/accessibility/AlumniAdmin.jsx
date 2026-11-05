@@ -1,0 +1,68 @@
+import { useEffect, useMemo, useState } from 'react';
+import { Pencil, Plus, Trash2, Save, X, Upload, Eye, EyeOff } from 'lucide-react';
+
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
+const SECTIONS = {
+  stats: { label: 'Statistics', fields: [['label','Label','text'],['value','Value','text'],['display_order','Display Order','number']] },
+  highlights: { label: 'Highlights', fields: [['title','Title','text'],['description','Description','textarea'],['icon','Icon','text'],['display_order','Display Order','number']] },
+  committee: { label: 'Alumni Committee', fields: [['name','Name','text'],['designation','Designation','text'],['photo','Photo URL','text'],['display_order','Display Order','number']] , photo:true},
+  achievers: { label: 'Alumni Achievers', fields: [['name','Name','text'],['designation','Designation','text'],['department','Department','text'],['batch','Batch','text'],['description','Description','textarea'],['photo','Photo URL','text'],['display_order','Display Order','number']], photo:true },
+  stories: { label: 'Alumni Stories', fields: [['name','Name','text'],['batch','Batch','text'],['department','Department','text'],['story','Story','textarea'],['photo','Photo URL','text'],['display_order','Display Order','number']], photo:true },
+};
+
+const emptyPage = { title:'',subtitle:'',hero_image:'',about_title:'',about_content:'',registration_button_text:'Join Alumni Association',registration_button_url:'/alumni/register',activities_button_text:'View Alumni Achievers',activities_button_url:'/alumni/achievers',cta_title:'Stay Connected With Your College',cta_description:'',cta_button_text:'Register as Alumni',cta_button_url:'/alumni/register',address:'',phone:'',email:'',is_active:1 };
+
+async function request(url, options={}) {
+  const res = await fetch(`${API_BASE}${url}`, options);
+  const json = await res.json().catch(()=>({}));
+  if (!res.ok || json.success === false) throw new Error(json.message || 'Request failed');
+  return json;
+}
+
+function ImageField({value,onChange}) { return <div className="space-y-2"><input value={value||''} onChange={e=>onChange(e.target.value)} placeholder="Image URL (optional)" className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm"/><label className="inline-flex cursor-pointer items-center gap-2 rounded-md border border-slate-300 px-3 py-2 text-sm hover:bg-slate-50"><Upload size={15}/> Upload image<input type="file" accept="image/*" className="hidden" onChange={e=>onChange(e.target.files?.[0] || value)}/></label></div> }
+
+export default function AlumniAdmin(){
+  const [tab,setTab]=useState('page');
+  const [page,setPage]=useState(emptyPage); const [pageFile,setPageFile]=useState(null);
+  const [items,setItems]=useState([]); const [editing,setEditing]=useState(null); const [form,setForm]=useState({}); const [file,setFile]=useState(null);
+  const [loading,setLoading]=useState(true); const [saving,setSaving]=useState(false); const [message,setMessage]=useState(''); const [error,setError]=useState('');
+  const tabs=[['page','Alumni Page'],...Object.entries(SECTIONS).map(([k,v])=>[k,v.label])];
+
+  const loadPage=async()=>{const r=await request('/api/alumni/page'); setPage(r.data||emptyPage)};
+  const loadItems=async()=>{if(tab==='page')return; const r=await request(`/api/alumni/${tab}`); setItems(Array.isArray(r.data)?r.data:[])};
+  useEffect(()=>{(async()=>{try{setLoading(true);await loadPage();if(tab!=='page')await loadItems()}catch(e){setError(e.message)}finally{setLoading(false)}})()},[tab]);
+
+  function notify(msg){setMessage(msg);setError('');setTimeout(()=>setMessage(''),2500)}
+  async function savePage(e){e.preventDefault();try{setSaving(true);const fd=new FormData();Object.entries(page).forEach(([k,v])=>fd.append(k,v??''));if(pageFile)fd.append('hero_image_file',pageFile);const r=await request('/api/alumni/page',{method:'PUT',body:fd});setPage(r.data||page);notify('Alumni page saved successfully.')}catch(e){setError(e.message)}finally{setSaving(false)}}
+  function startNew(){setEditing('new');setForm({display_order:0,is_active:1,icon:'Users'});setFile(null);}
+  function startEdit(row){setEditing(row.id);setForm({...row});setFile(null)}
+  function cancel(){setEditing(null);setForm({});setFile(null)}
+  async function saveItem(e){e.preventDefault();try{setSaving(true);const fd=new FormData();Object.entries(form).forEach(([k,v])=>{if(k!=='photo')fd.append(k,v??'')});if(form.photo && typeof form.photo==='string')fd.append('photo',form.photo);if(file)fd.append('photo_file',file);const url=editing==='new'?`/api/alumni/${tab}`:`/api/alumni/${tab}/${editing}`;const r=await request(url,{method:editing==='new'?'POST':'PUT',body:fd});if(editing==='new')setItems(x=>[...x,r.data]);else setItems(x=>x.map(i=>i.id===editing?r.data:i));cancel();notify(editing==='new'?'Added successfully':'Updated successfully')}catch(e){setError(e.message)}finally{setSaving(false)}}
+  async function remove(id){if(!window.confirm('Delete this record?'))return;try{await request(`/api/alumni/${tab}/${id}`,{method:'DELETE'});setItems(x=>x.filter(i=>i.id!==id));notify('Deleted successfully')}catch(e){setError(e.message)}}
+  async function toggle(row){try{const fd=new FormData();Object.entries(row).forEach(([k,v])=>{if(k!=='id'&&k!=='created_at'&&k!=='updated_at')fd.append(k,k==='is_active'?(Number(v)?0:1):v??'')});const r=await request(`/api/alumni/${tab}/${row.id}`,{method:'PUT',body:fd});setItems(x=>x.map(i=>i.id===row.id?r.data:i))}catch(e){setError(e.message)}}
+
+  return <div className="min-h-screen bg-slate-50 p-4 md:p-6">
+    <div className="mx-auto max-w-7xl">
+      <div className="mb-6 flex flex-wrap items-center justify-between gap-3"><div><h1 className="text-2xl font-semibold text-slate-900">Alumni Management</h1><p className="mt-1 text-sm text-slate-500">Manage all public Alumni page content.</p></div></div>
+      {message&&<div className="mb-4 rounded-md border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-700">{message}</div>}
+      {error&&<div className="mb-4 rounded-md border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700">{error}</div>}
+      <div className="mb-6 flex gap-1 overflow-x-auto rounded-lg border border-slate-200 bg-white p-1">{tabs.map(([key,label])=><button key={key} onClick={()=>{setTab(key);cancel()}} className={`whitespace-nowrap rounded-md px-4 py-2 text-sm ${tab===key?'bg-blue-600 text-white':'text-slate-600 hover:bg-slate-100'}`}>{label}</button>)}</div>
+
+      {tab==='page'?<form onSubmit={savePage} className="space-y-6">
+        <Section title="Hero & About"><div className="grid gap-5 md:grid-cols-2"><Field label="Title" value={page.title} onChange={v=>setPage({...page,title:v})} required/><Field label="Subtitle" textarea value={page.subtitle} onChange={v=>setPage({...page,subtitle:v})}/><Field label="About Title" value={page.about_title} onChange={v=>setPage({...page,about_title:v})}/><Field label="About Content" textarea value={page.about_content} onChange={v=>setPage({...page,about_content:v})}/><div><label className="mb-1 block text-sm font-medium text-slate-700">Hero Image</label><ImageField value={page.hero_image} onChange={v=>typeof v==='string'?setPage({...page,hero_image:v}):setPageFile(v)}/>{pageFile&&<p className="mt-1 text-xs text-slate-500">Selected: {pageFile.name}</p>}</div></div></Section>
+        <Section title="Buttons & Registration"><div className="grid gap-5 md:grid-cols-2"><Field label="Registration Button Text" value={page.registration_button_text} onChange={v=>setPage({...page,registration_button_text:v})}/><Field label="Registration URL" value={page.registration_button_url} onChange={v=>setPage({...page,registration_button_url:v})}/><Field label="Second Button Text" value={page.activities_button_text} onChange={v=>setPage({...page,activities_button_text:v})}/><Field label="Second Button URL" value={page.activities_button_url} onChange={v=>setPage({...page,activities_button_url:v})}/></div></Section>
+        <Section title="Registration CTA"><div className="grid gap-5 md:grid-cols-2"><Field label="CTA Title" value={page.cta_title} onChange={v=>setPage({...page,cta_title:v})}/><Field label="CTA Button Text" value={page.cta_button_text} onChange={v=>setPage({...page,cta_button_text:v})}/><Field label="CTA Description" textarea value={page.cta_description} onChange={v=>setPage({...page,cta_description:v})}/><Field label="CTA Button URL" value={page.cta_button_url} onChange={v=>setPage({...page,cta_button_url:v})}/></div></Section>
+        <Section title="Contact"><div className="grid gap-5 md:grid-cols-3"><Field label="Address" textarea value={page.address} onChange={v=>setPage({...page,address:v})}/><Field label="Phone" value={page.phone} onChange={v=>setPage({...page,phone:v})}/><Field label="Email" value={page.email} onChange={v=>setPage({...page,email:v})}/></div></Section>
+        <div className="flex justify-end"><button disabled={saving} className="inline-flex items-center gap-2 rounded-md bg-blue-600 px-5 py-2.5 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-60"><Save size={16}/>{saving?'Saving...':'Save Alumni Page'}</button></div>
+      </form>:
+      <div><div className="mb-4 flex justify-end"><button onClick={startNew} className="inline-flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-blue-700"><Plus size={16}/> Add {SECTIONS[tab].label.replace('Alumni ','')}</button></div>
+      {editing!==null&&<form onSubmit={saveItem} className="mb-6 rounded-lg border border-blue-200 bg-white p-5 shadow-sm"><div className="mb-4 flex items-center justify-between"><h2 className="font-semibold text-slate-900">{editing==='new'?'Add Record':'Edit Record'}</h2><button type="button" onClick={cancel}><X size={19}/></button></div><div className="grid gap-4 md:grid-cols-2">{SECTIONS[tab].fields.map(([key,label,type])=>key==='photo'?<div key={key}><label className="mb-1 block text-sm font-medium text-slate-700">{label}</label><ImageField value={form.photo} onChange={v=>typeof v==='string'?setForm({...form,photo:v}):setFile(v)}/>{file&&<p className="mt-1 text-xs text-slate-500">Selected: {file.name}</p>}</div>:<Field key={key} label={label} type={type} textarea={type==='textarea'} value={form[key]??''} onChange={v=>setForm({...form,[key]:v})}/>)}</div><label className="mt-4 flex items-center gap-2 text-sm text-slate-700"><input type="checkbox" checked={Number(form.is_active)!==0} onChange={e=>setForm({...form,is_active:e.target.checked?1:0})}/> Active / visible on website</label><div className="mt-5 flex justify-end gap-2"><button type="button" onClick={cancel} className="rounded-md border px-4 py-2 text-sm">Cancel</button><button disabled={saving} className="inline-flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2 text-sm font-medium text-white"><Save size={15}/>{saving?'Saving...':'Save'}</button></div></form>}
+      {loading?<div className="rounded-lg bg-white p-8 text-center text-sm text-slate-500">Loading...</div>:items.length===0?<div className="rounded-lg border border-dashed border-slate-300 bg-white p-10 text-center text-sm text-slate-500">No records available. Add your first record.</div>:<div className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm"><div className="overflow-x-auto"><table className="w-full text-left text-sm"><thead className="bg-slate-50 text-xs uppercase text-slate-500"><tr><th className="px-4 py-3">Content</th><th className="px-4 py-3">Order</th><th className="px-4 py-3">Status</th><th className="px-4 py-3 text-right">Actions</th></tr></thead><tbody className="divide-y divide-slate-100">{items.map(row=><tr key={row.id}><td className="px-4 py-4"><div className="font-medium text-slate-900">{row.name||row.title||row.label||row.value}</div><div className="mt-1 max-w-xl truncate text-xs text-slate-500">{row.designation||row.description||row.story||row.department||''}</div></td><td className="px-4 py-4 text-slate-500">{row.display_order}</td><td className="px-4 py-4"><button onClick={()=>toggle(row)} className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs ${Number(row.is_active)?'bg-emerald-50 text-emerald-700':'bg-slate-100 text-slate-500'}`}>{Number(row.is_active)?<Eye size={13}/>:<EyeOff size={13}/>} {Number(row.is_active)?'Active':'Hidden'}</button></td><td className="px-4 py-4"><div className="flex justify-end gap-2"><button onClick={()=>startEdit(row)} className="rounded-md border p-2 text-slate-600 hover:bg-slate-50"><Pencil size={15}/></button><button onClick={()=>remove(row.id)} className="rounded-md border border-red-200 p-2 text-red-600 hover:bg-red-50"><Trash2 size={15}/></button></div></td></tr>)}</tbody></table></div></div>}
+      </div>}
+    </div>
+  </div>
+}
+
+function Field({label,value,onChange,textarea=false,required=false,type='text'}){return <div><label className="mb-1 block text-sm font-medium text-slate-700">{label}{required&&<span className="text-red-500"> *</span>}</label>{textarea?<textarea required={required} value={value||''} onChange={e=>onChange(e.target.value)} rows={4} className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-blue-500"/>:<input required={required} type={type} value={value??''} onChange={e=>onChange(e.target.value)} className="w-full rounded-md border border-slate-300 px-3 py-2 text-sm outline-none focus:border-blue-500"/>}</div>}
+function Section({title,children}){return <section className="rounded-lg border border-slate-200 bg-white p-5 shadow-sm"><h2 className="mb-5 border-b border-slate-100 pb-3 text-base font-semibold text-slate-900">{title}</h2>{children}</section>}
