@@ -11,54 +11,54 @@ import pool from "./config/db.js";
 // ROUTES
 // ============================================================
 
-import heroSliderRoutes from "./routes/heroSliderRoutes.js";
-import statisticsRoutes from "./routes/statisticsRoutes.js";
-import homeEventsRoutes from "./routes/homeEventsRoutes.js";
-import youtubeRoutes from "./routes/YoutubeRoutes.js";
-import homePlacementsRoutes from "./routes/homeplacementRoutes.js";
-import homeGalleryRoutes from "./routes/homeGalleryRoutes.js";
-import settingsRoutes from "./routes/settingsRoutes.js";
-import newsNoticeRoutes from "./routes/newsNoticeRoutes.js";
-import breakingNewsRoutes from "./routes/breakingNewsRoutes.js";
-import quickLinksRoutes from "./routes/quickLinksRoutes.js";
-import homeHeroRoutes from "./routes/homeHeroRoutes.js";
-import homeStatisticsRoutes from "./routes/homeStatisticsRoutes.js";
-import homeWelcomeRoutes from "./routes/homeWelcomeRoutes.js";
-import achievementsRoutes from "./routes/achievementsRoutes.js";
-import aboutCollegeRoutes from "./routes/aboutCollegeRoutes.js";
-import bottomInstitutionalStripRoutes from "./routes/bottomInstitutionalStripRoute.js";
-import footerRoute from "./routes/footerRoutes.js";
+import heroSliderRoutes from "./backend/routes/heroSliderRoutes.js";
+import statisticsRoutes from "./backend/routes/statisticsRoutes.js";
+import homeEventsRoutes from "./backend/routes/homeEventsRoutes.js";
+import youtubeRoutes from "./backend/routes/YoutubeRoutes.js";
+import homePlacementsRoutes from "./backend/routes/homeplacementRoutes.js";
+import homeGalleryRoutes from "./backend/routes/homeGalleryRoutes.js";
+import settingsRoutes from "./backend/routes/settingsRoutes.js";
+import newsNoticeRoutes from "./backend/routes/newsNoticeRoutes.js";
+import breakingNewsRoutes from "./backend/routes/breakingNewsRoutes.js";
+import quickLinksRoutes from "./backend/routes/quickLinksRoutes.js";
+import homeHeroRoutes from "./backend/routes/homeHeroRoutes.js";
+import homeStatisticsRoutes from "./backend/routes/homeStatisticsRoutes.js";
+import homeWelcomeRoutes from "./backend/routes/homeWelcomeRoutes.js";
+import achievementsRoutes from "./backend/routes/achievementsRoutes.js";
+import aboutCollegeRoutes from "./backend/routes/aboutCollegeRoutes.js";
+import bottomInstitutionalStripRoutes from "./backend/routes/bottomInstitutionalStripRoute.js";
+import footerRoute from "./backend/routes/footerRoutes.js";
 
-import screenReaderRoutes from "./routes/screenReaderRoutes.js";
+import screenReaderRoutes from "./backend/routes/screenReaderRoutes.js";
 //======================================
 // COLLEGE DEPT
 //=======================================
 
-import departmentRoutes from "./routes/department/departmentRoutes.js";
-import departmentProgrammeRoutes from "./routes/department/departmentProgrammeRoutes.js";
-import departmentProfileRoutes from "./routes/department/departmentProfileRoutes.js";
-import departmentFacultyRoutes from "./routes/department/departmentFacultyRoutes.js";
-import naacRoutes from "./routes/naacRoutes.js";
-import aqarRoutes from "./routes/aqarRoutes.js";
-import iqacRoutes from "./routes/iqacRoutes.js";
+import departmentRoutes from "./backend/routes/department/departmentRoutes.js";
+import departmentProgrammeRoutes from "./backend/routes/department/departmentProgrammeRoutes.js";
+import departmentProfileRoutes from "./backend/routes/department/departmentProfileRoutes.js";
+import departmentFacultyRoutes from "./backend/routes/department/departmentFacultyRoutes.js";
+import naacRoutes from "./backend/routes/naacRoutes.js";
+import aqarRoutes from "./backend/routes/aqarRoutes.js";
+import iqacRoutes from "./backend/routes/iqacRoutes.js";
 // ============================================================
 // COLLEGE HEADER
 // ============================================================
 
-import collegeHeaderRoutes from "./routes/collegeHeaderRoute.js";
+import collegeHeaderRoutes from "./backend/routes/collegeHeaderRoute.js";
 
 
 
 //===========================================================
 // NAAC
-import extensionProfileRoutes from "./routes/extensionProfileRoutes.js";
-import criteriaExtensionDocumentsRoutes from "./routes/criteriaExtensionDocumentsRoutes.js";
-import bestPracticesRoutes from "./routes/bestPracticesRoutes.js";
-import committeeDocumentsRoutes from "./routes/committeeDocumentsRoutes.js";
-import managementCommitteesRoutes from "./routes/managementCommitteesRoutes.js";
-import sitePagesRoutes from "./routes/sitePagesRoutes.js";
-import facilitiesRoutes from "./routes/facilitiesRoutes.js";
-import contentDocumentRoutes from "./routes/contentDocumentRoutes.js";
+import extensionProfileRoutes from "./backend/routes/extensionProfileRoutes.js";
+import criteriaExtensionDocumentsRoutes from "./backend/routes/criteriaExtensionDocumentsRoutes.js";
+import bestPracticesRoutes from "./backend/routes/bestPracticesRoutes.js";
+import committeeDocumentsRoutes from "./backend/routes/committeeDocumentsRoutes.js";
+import managementCommitteesRoutes from "./backend/routes/managementCommitteesRoutes.js";
+import sitePagesRoutes from "./backend/routes/sitePagesRoutes.js";
+import facilitiesRoutes from "./backend/routes/facilitiesRoutes.js";
+import contentDocumentRoutes from "./backend/routes/contentDocumentRoutes.js";
 //===========================================================
 // ============================================================
 // ENVIRONMENT
@@ -409,7 +409,7 @@ app.use("/api/naac", naacRoutes);
 app.use((req, res) => {
   res.status(404).json({
     success: false,
-    message: "API endpoint not found",
+    message: "BACKEND SERVER.JS IS RUNNING",
     path: req.originalUrl,
   });
 });

@@ -1,6 +1,6 @@
  import SiteHeader from "../header/SiteHeader";
  import Navbar from "../navbar/Navbar";
- import PublicFooter from "../footer/PublicFooter";
+ import PublicFooter from "../Footer/PublicFooter";
  import BreakingNews from "./BreakingNews";
  import HeroSlider from "./HeroSlider";
  import PrincipalWelcome from "./PrincipalWelcome";

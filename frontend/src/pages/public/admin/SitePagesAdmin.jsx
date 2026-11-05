@@ -6,7 +6,7 @@ const configuredApiBase = import.meta.env.VITE_API_URL
   ?.replace(/\/+$/, "")
   .replace(/\/api$/i, "");
 const API_BASE = configuredApiBase || (
-  import.meta.env.DEV ? "http://localhost:5000" : window.location.origin
+  import.meta.env.DEV ? "" : window.location.origin
 );
 const pageDefaults = Object.entries(pageMap).map(([page_key, content]) => ({ page_key, content }));
 const excludedStudentSectionTitles = new Set(["volunteering", "outreach", "community development"]);

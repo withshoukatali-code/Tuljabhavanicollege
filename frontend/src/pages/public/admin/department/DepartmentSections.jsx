@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Pencil, Plus, Save, Trash2, X } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 const EMPTY_SECTION = { section_key: "", title: "", content: "", display_order: 0, is_active: 1 };
 const CONTENT_TAGS = new Set([
   "A", "B", "BLOCKQUOTE", "BR", "DIV", "EM", "H1", "H2", "H3", "H4", "H5", "H6",

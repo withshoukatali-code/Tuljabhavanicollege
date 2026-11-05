@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { FileText, LoaderCircle, Pencil, Plus, Save, Trash2, Upload, X } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 const emptyDocument = {
   title: "",
   description: "",

@@ -9,8 +9,8 @@
 //   GraduationCap,
 // } from "lucide-react";
 
-// const HERO_API = "http://localhost:5000/api/hero-slider";
-// const STATS_API = "http://localhost:5000/api/college-statistics";
+// const HERO_API = "/api/hero-slider";
+// const STATS_API = "/api/college-statistics";
 
 // function getImageUrl(path) {
 //   if (!path) return "";
@@ -22,7 +22,7 @@
 //     return path;
 //   }
 
-//   return `http://localhost:5000${
+//   return `${
 //     path.startsWith("/") ? "" : "/"
 //   }${path}`;
 // }
@@ -516,8 +516,8 @@
 //   BarChart3,
 // } from "lucide-react";
 
-// const HERO_API = "http://localhost:5000/api/hero-slider";
-// const STATS_API = "http://localhost:5000/api/home-statistics";
+// const HERO_API = "/api/hero-slider";
+// const STATS_API = "/api/home-statistics";
 
 // function getImageUrl(path) {
 //   if (!path) return "";
@@ -529,7 +529,7 @@
 //     return path;
 //   }
 
-//   return `http://localhost:5000${
+//   return `${
 //     path.startsWith("/") ? "" : "/"
 //   }${path}`;
 // }
@@ -1013,8 +1013,8 @@ import {
   BarChart3,
 } from "lucide-react";
 
-const HERO_API = "http://localhost:5000/api/hero-slider";
-const STATS_API = "http://localhost:5000/api/home-statistics";
+const HERO_API = "/api/hero-slider";
+const STATS_API = "/api/home-statistics";
 
 function getImageUrl(path) {
   if (!path) return "";
@@ -1026,7 +1026,7 @@ function getImageUrl(path) {
     return path;
   }
 
-  return `http://localhost:5000${
+  return `${
     path.startsWith("/") ? "" : "/"
   }${path}`;
 }

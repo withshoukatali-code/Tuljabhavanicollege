@@ -22,3 +22,20 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+
+# Uploaded files and runtime data
+uploads/
+tmp/
+
+# Dependencies and build output
+node_modules/
+frontend/node_modules/
+frontend/dist/

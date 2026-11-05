@@ -13,7 +13,7 @@
 //   ExternalLink,
 // } from "lucide-react";
 
-// const API_BASE = "http://localhost:5000";
+// const API_BASE = "";
 // const API_URL = `${API_BASE}/api/news-notices`;
 
 // const emptyForm = {
@@ -950,7 +950,7 @@
 //   FolderOpen,
 // } from "lucide-react";
 
-// const API_BASE = "http://localhost:5000";
+// const API_BASE = "";
 // const API_URL = `${API_BASE}/api/news-notices`;
 // const BROWSE_API_URL = `${API_BASE}/api/files`;
 
@@ -2210,7 +2210,7 @@ import {
   Megaphone,
 } from "lucide-react";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "";
 const API_URL = `${API_BASE}/api/news-notices`;
 
 const initialForm = {

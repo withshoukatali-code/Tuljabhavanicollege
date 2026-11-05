@@ -8,7 +8,7 @@ import {
   BarChart3,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-statistics";
+const API_URL = "/api/home-statistics";
 
 const emptyForm = {
   label: "",

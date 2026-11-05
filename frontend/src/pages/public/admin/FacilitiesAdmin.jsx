@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Building2, Edit3, LoaderCircle, Plus, Save, Trash2, Upload, X } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 const emptyFacility = {
   name: "", category: "Campus", description: "", features: [], image_url: "",
   building_area_sq_ft: "", open_area_sq_ft: "", computer_count: "",

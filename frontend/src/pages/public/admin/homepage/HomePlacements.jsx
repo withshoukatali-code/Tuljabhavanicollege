@@ -11,7 +11,7 @@
 //   Image as ImageIcon,
 // } from "lucide-react";
 
-// const API_URL = "http://localhost:5000/api/home-placements";
+// const API_URL = "/api/home-placements";
 
 // const emptyForm = {
 //   company_name: "",
@@ -1042,7 +1042,7 @@ import {
   X,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-placements";
+const API_URL = "/api/home-placements";
 const ADMIN_API_URL = `${API_URL}/admin`;
 
 const emptyForm = {
@@ -1067,7 +1067,7 @@ const logoUrl = (value) => {
     return value;
   }
 
-  return `http://localhost:5000${value}`;
+  return `${value}`;
 };
 
 const readJson = async (response) => {

@@ -9,7 +9,7 @@ import {
   X,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-events";
+const API_URL = "/api/home-events";
 
 const emptyForm = {
   title: "",
@@ -34,7 +34,7 @@ const imageUrl = (value) => {
     return value;
   }
 
-  return `http://localhost:5000${value}`;
+  return `${value}`;
 };
 
 function HomeEvents() {

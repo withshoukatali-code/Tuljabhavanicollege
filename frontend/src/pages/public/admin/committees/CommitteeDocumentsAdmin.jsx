@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { ExternalLink, FileText, LoaderCircle, Plus, Save, Trash2, Upload } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 const emptyCommittee = { committee_title: "", category: "", display_order: 0, is_active: 1 };
 
 export default function CommitteeDocumentsAdmin() {

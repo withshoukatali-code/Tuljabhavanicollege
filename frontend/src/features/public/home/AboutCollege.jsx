@@ -8,7 +8,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const API_URL = "http://localhost:5000/api/about-college";
+const API_URL = "/api/about-college";
 
 const fallbackData = {
   title: "Building Knowledge,",
@@ -122,10 +122,10 @@ const AboutPreview = () => {
      * Backend uploaded image
      */
     if (imageUrl.startsWith("/")) {
-      return `http://localhost:5000${imageUrl}`;
+      return `${imageUrl}`;
     }
 
-    return `http://localhost:5000/${imageUrl}`;
+    return `/${imageUrl}`;
   };
 
   // ============================================================

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { LoaderCircle, Plus, Save, Trash2, X } from "lucide-react";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 const committees = [
   { key: "governing-management", label: "Governing Management Committee" },
   { key: "local-management", label: "Local Management Committee" },

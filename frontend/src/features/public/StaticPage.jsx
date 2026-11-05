@@ -6,7 +6,7 @@
 //     contentVersion: 2,
 // import PublicFooter from "./Footer/PublicFooter";
 //     subtitle: "Environmental sustainability and NAAC documentation",
-// const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+// const API_BASE = import.meta.env.VITE_API_URL || "";
 //       "A green and environmental audit helps a senior college review its environmental footprint, document sustainable campus practices, and track improvements with verifiable evidence.",
 //     highlights: ["NAAC Criterion 7.1.3", "Environmental stewardship", "Evidence-led improvement"],
 //   about: { accent: "#0f3262" },
@@ -1648,7 +1648,7 @@ import Navbar from "./navbar/Navbar";
 import PublicFooter from "./Footer/PublicFooter";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_URL || "";
 
 /* ============================================================
    THEME MAP

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { LoaderCircle, Plus, Save, Trash2, Upload } from "lucide-react";
 import { libraryDefaultContent, normalizeLibraryContent } from "../../../features/public/library/libraryContent";
 
-const API_BASE = import.meta.env.VITE_API_URL || "http://localhost:5000";
+const API_BASE = import.meta.env.VITE_API_URL || "";
 
 export default function LibraryAdmin() {
   const [content, setContent] = useState(null);

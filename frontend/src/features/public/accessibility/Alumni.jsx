@@ -6,7 +6,7 @@ import Navbar from '../navbar/Navbar';
 import PublicFooter from '../Footer/PublicFooter';
 import { pageMap } from '../StaticPage';
 
-const API_BASE = (import.meta.env.VITE_API_URL || 'http://localhost:5000')
+const API_BASE = (import.meta.env.VITE_API_URL || '')
  .replace(/\/+$/, '')
  .replace(/\/api$/i, '');
 function resolveUrl(value){ if(!value)return ''; if(/^https?:\/\//i.test(value)||value.startsWith('blob:'))return value; return value.startsWith('/')?`${API_BASE}${value}`:`${API_BASE}/${value}`; }

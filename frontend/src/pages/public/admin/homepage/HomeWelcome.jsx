@@ -10,7 +10,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-welcome";
+const API_URL = "/api/home-welcome";
 
 const emptyForm = {
   welcome_title: "",

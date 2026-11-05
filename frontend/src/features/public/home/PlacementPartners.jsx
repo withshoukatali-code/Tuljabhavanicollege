@@ -7,7 +7,7 @@ import {
   ArrowUpRight,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/home-placements";
+const API_URL = "/api/home-placements";
 
 const getLogoUrl = (logo) => {
   if (!logo) return "";
@@ -20,7 +20,7 @@ const getLogoUrl = (logo) => {
     return logo;
   }
 
-  return `http://localhost:5000${logo}`;
+  return `${logo}`;
 };
 
 const PlacementPartners = () => {

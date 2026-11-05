@@ -11,7 +11,7 @@ import Navbar from "../navbar/Navbar";
 import PublicFooter from "../Footer/PublicFooter";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_URL || "";
 
 export default function ScreenReader() {
   const [readers, setReaders] = useState([]);

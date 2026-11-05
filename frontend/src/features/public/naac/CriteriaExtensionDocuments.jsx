@@ -12,7 +12,7 @@ import Navbar from "../navbar/Navbar";
 import PublicFooter from "../Footer/PublicFooter";
 
 const API_BASE =
-  import.meta.env.VITE_API_URL || "http://localhost:5000";
+  import.meta.env.VITE_API_URL || "";
 
 const API_URL =
   `${API_BASE}/api/naac/extension-documents`;

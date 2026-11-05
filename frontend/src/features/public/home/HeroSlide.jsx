@@ -5,7 +5,7 @@ import {
   ChevronRight,
 } from "lucide-react";
 
-const API = "http://localhost:5000/api/hero-slider";
+const API = "/api/hero-slider";
 
 function getImageUrl(path) {
   if (!path) return "";
@@ -17,7 +17,7 @@ function getImageUrl(path) {
     return path;
   }
 
-  return `http://localhost:5000${
+  return `${
     path.startsWith("/") ? "" : "/"
   }${path}`;
 }

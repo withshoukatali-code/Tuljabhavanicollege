@@ -157,7 +157,7 @@ import {
   RefreshCw,
 } from "lucide-react";
 
-const API_URL = "http://localhost:5000/api/news-notices";
+const API_URL = "/api/news-notices";
 
 function NewsPanel() {
   const [news, setNews] = useState([]);

@@ -5,7 +5,7 @@
 // import CollegeImage from "./CollegeImage";
 // import NaacCard from "./NaacCard";
 
-// const API_URL = "http://localhost:5000/api/settings";
+// const API_URL = "/api/settings";
 
 // const fallbackCollege = {
 //   logo_url: "/images/logo.png",
@@ -142,7 +142,7 @@
 //   MapPin,
 // } from "lucide-react";
 
-// const API_BASE = "http://localhost:5000";
+// const API_BASE = "";
 
 // const API_URL = `${API_BASE}/api/college-header`;
 
@@ -693,7 +693,7 @@ import {
   BadgeCheck,
 } from "lucide-react";
 
-const API_BASE = "http://localhost:5000";
+const API_BASE = "";
 const API_URL = `${API_BASE}/api/college-header`;
 
 function SiteHeader() {

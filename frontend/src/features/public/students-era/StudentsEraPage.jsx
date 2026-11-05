@@ -17,7 +17,7 @@ const configuredApiBase = import.meta.env.VITE_API_URL
   ?.replace(/\/+$/, "")
   .replace(/\/api$/i, "");
 const API_BASE = configuredApiBase || (
-  import.meta.env.DEV ? "http://localhost:5000" : window.location.origin
+  import.meta.env.DEV ? "" : window.location.origin
 );
 const accentByKind = {
   overview: "#0f3262",
