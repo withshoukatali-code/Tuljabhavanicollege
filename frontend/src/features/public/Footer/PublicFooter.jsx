@@ -15,7 +15,8 @@ import {
   Eye,
 } from "lucide-react";
 
-const API_BASE = "/api";
+const API_BASE =
+  import.meta.env.VITE_API_URL || "http://localhost:5000/api";
 
 const PublicFooter = () => {
   const [footer, setFooter] = useState(null);
@@ -444,20 +445,20 @@ const PublicFooter = () => {
                 footer.developer_url ? (
                   <a
                     href={footer.developer_url}
-                    target="_blank"
+                    target="_blank" 
                     rel="noopener noreferrer"
                     className="font-semibold text-[#d4af37] transition hover:text-white"
                   >
-                    {footer.developer_name}
+                    {/* {footer.developer_name} */}
                   </a>
                 ) : (
                   <span className="font-semibold text-[#d4af37]">
-                    {footer.developer_name}
+                    {/* {footer.developer_name} */}
                   </span>
                 )
               ) : (
                 <span className="font-semibold text-[#d4af37]">
-                  Innovative Academy
+                  {/* Innovative */}
                 </span>
               )}
             </p>
